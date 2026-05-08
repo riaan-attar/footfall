@@ -84,25 +84,14 @@ function Navbar() {
         {/* Desktop Nav Links */}
         <div className='navLinks hidden md:flex items-center gap-[0.2vw]'>
           {data.map((item, index) => {
-            const x = useMotionValue(0);
-            const y = useMotionValue(0);
             return (
-              <motion.button
-                onPointerMove={(event) => {
-                  const el = event.currentTarget;
-                  setTransform(el, event, x, y)
-                }}
-                onPointerLeave={() => {
-                  x.set(0)
-                  y.set(0)
-                }}
+              <button
                 onClick={() => handleNavClick(item.target)}
-                style={{ x, y }}
                 key={index}
                 className={`${styles.navBtn} px-[1.1vw] py-[0.6vw] text-[0.85vw] uppercase tracking-widest font-semibold cursor-pointer border-none bg-transparent`}
               >
                 <span className={`${styles.navText}`}>{item.title}</span>
-              </motion.button>
+              </button>
             )
           })}
         </div>
