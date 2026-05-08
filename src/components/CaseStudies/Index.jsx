@@ -61,7 +61,7 @@ const cases = [
 
 export default function CaseStudies() {
   return (
-    <section id="case-studies" className="w-full bg-white py-[6vw]">
+    <section id="case-studies" className="w-full bg-white pt-[6vw] pb-0">
       {/* Section Header */}
       <div className="flex flex-row items-baseline gap-[4vw] md:gap-[5vw] w-full px-[6vw] md:px-[4vw] mb-[6vw]">
         <div className="left">
@@ -73,7 +73,7 @@ export default function CaseStudies() {
         </div>
         <div className="right w-full">
           <div className="aboutHeading overflow-hidden pb-[3vw] md:pb-0">
-            <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase">
+            <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase title-hover-outline cursor-default">
               Case Studies
             </h1>
           </div>
@@ -86,9 +86,8 @@ export default function CaseStudies() {
         {cases.map((study, i) => (
           <article
             key={i}
-            className={`group relative w-full rounded-2xl overflow-hidden flex flex-col md:flex ${
-              i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-            }`}
+            className={`group relative w-full rounded-2xl overflow-hidden flex flex-col md:flex ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+              }`}
             style={{ backgroundColor: study.color }}
           >
             {/* Image Half — explicit aspect-ratio so Locomotive Scroll knows height before img loads */}
@@ -104,9 +103,8 @@ export default function CaseStudies() {
 
             {/* Content Half */}
             <div
-              className={`relative w-full md:w-1/2 flex flex-col justify-center px-[8vw] py-[12vw] md:px-[5vw] md:py-[4vw] ${
-                study.textLight ? 'text-white' : 'text-zinc-900'
-              }`}
+              className={`relative w-full md:w-1/2 flex flex-col justify-center px-[8vw] py-[12vw] md:px-[5vw] md:py-[4vw] ${study.textLight ? 'text-white' : 'text-zinc-900'
+                }`}
             >
               {/* Stats Block */}
               {study.stats && (
@@ -118,7 +116,7 @@ export default function CaseStudies() {
                       <span className="font-[PlinaReg] text-[7vw] md:text-[2vw] leading-none font-bold">
                         {stat.value}
                       </span>
-                      <span 
+                      <span
                         className="font-sans text-[2.5vw] md:text-[0.7vw] uppercase tracking-widest font-semibold"
                         style={{ opacity: study.textLight ? 0.7 : 0.6 }}
                       >
@@ -182,6 +180,19 @@ export default function CaseStudies() {
             </div>
           </article>
         ))}
+      </div>
+      <div className="w-full bg-white border-t border-zinc-100 px-[6vw] md:px-[4vw] pt-[6vw] pb-0 md:pt-[2vw] md:pb-0">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <h5 className="text-[3vw] md:text-[.8vw] text-zinc-400 font-semibold tracking-widest uppercase">
+            Footfall Marketing &copy; 2024
+          </h5>
+          <h5 className="text-[3vw] md:text-[.8vw] text-zinc-400 font-semibold tracking-widest uppercase flex items-center gap-2">
+            Developed by
+            <a href="https://riaanattar.me" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#F63D18] transition-colors underline decoration-1 underline-offset-4 font-bold">
+              Riaan Attar
+            </a>
+          </h5>
+        </div>
       </div>
     </section>
   );

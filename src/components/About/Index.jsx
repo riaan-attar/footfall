@@ -93,7 +93,7 @@ const About = () => {
         </div>
         <div className="right w-full">
           <div className="aboutHeading overflow-hidden pb-[3vw] md:pb-0">
-            <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase">
+            <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase title-hover-outline cursor-default">
               About Footfall Marketing
             </h1>
           </div>
@@ -134,7 +134,7 @@ const About = () => {
             <img
               src={secondaryImage.src}
               alt={secondaryImage.alt}
-              className="grow basis-0 rounded-xl object-cover md:w-1/2 lg:min-h-0 lg:w-auto"
+              className="min-h-[300px] rounded-xl object-cover md:w-1/2 lg:min-h-0 lg:w-auto"
             />
           </div>
         </div>
@@ -186,7 +186,7 @@ const About = () => {
         </div>
 
         {contentSections && contentSections.length > 0 && (
-          <div className="mx-auto grid max-w-5xl gap-16 py-24 md:py-28 md:grid-cols-2 md:gap-28">
+          <div className="mx-auto grid max-w-5xl gap-12 py-12 md:py-28 md:grid-cols-2 md:gap-28">
             {contentSections.map((section, idx) => (
               <div key={section.title + idx}>
                 <h2 className="mb-5 text-4xl font-[PlinaReg] uppercase font-bold tracking-tight text-black">{section.title}</h2>

@@ -43,7 +43,7 @@ function Navbar() {
   };
 
   return (
-    <div className={`w-full sticky top-0 z-50 ${styles.navbarWrapper}`}>
+    <div className={`w-full fixed md:sticky top-0 z-[999] ${styles.navbarWrapper}`}>
       <div className="header 
         flex md:items-center justify-between 
         px-[4vw] py-[4vw]

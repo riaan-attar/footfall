@@ -14,7 +14,7 @@ function Testimonials() {
             </div>
             <div className="right w-full">
                 <div className="aboutHeading overflow-hidden pb-[3vw] md:pb-0">
-                    <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase">
+                    <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase title-hover-outline cursor-default">
                         Testimonials
                     </h1>
                 </div>
@@ -49,6 +49,16 @@ function Testimonials() {
             scrollSpeed={2}
             scrollEase={0.05}
           />
+        </div>
+
+        {/* Mobile Swipe Hint */}
+        <div className="md:hidden w-full px-[6vw] flex justify-end mt-[12vw] mb-[8vw]">
+          <p className="font-[PlinaReg] text-[3vw] uppercase tracking-widest text-zinc-400 flex items-center gap-2">
+            swipe to see more 
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="animate-bounce-x">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </p>
         </div>
     </div>
   )

@@ -35,13 +35,13 @@ const Services = () => {
         <div className="left">
           <div className="md:pl-[14vw]">
             <div className="font-[silkSerif] text-[8vw] mb-0 md:mb-0 md:text-[2.6vw] md:leading-[4vw]">
-              <h2>02</h2>
+              {/* <h2>02</h2> */}
             </div>
           </div>
         </div>
         <div className="right w-full">
           <div className="aboutHeading overflow-hidden pb-[3vw] md:pb-0">
-            <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase">
+            <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase title-hover-outline cursor-default">
               Our Services
             </h1>
           </div>
@@ -51,18 +51,18 @@ const Services = () => {
 
       <div className="w-full flex flex-col md:flex-row md:flex-wrap justify-between gap-[6vw] md:gap-[4vw]">
         {services.map((service, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="group relative w-full md:w-[calc(50%-2vw)] lg:w-[calc(25%-3vw)] flex flex-col justify-between min-h-[300px] md:min-h-[400px] p-[6vw] md:p-[2.5vw] rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 border border-zinc-200 bg-gray-50 hover:bg-white hover:shadow-lg"
           >
             {/* Background Hover Effect */}
-            <div 
+            <div
               className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 z-0"
               style={{ backgroundColor: service.color }}
             ></div>
-            
+
             <div className="relative z-10">
-              <span 
+              <span
                 className="font-[silkSerif] text-[10vw] md:text-[3vw] leading-none mb-6 block transition-colors duration-500 text-[#F63D18]"
               >
                 {service.id}
@@ -74,17 +74,17 @@ const Services = () => {
                 {service.description}
               </p>
             </div>
-            
+
             {/* Decorative arrow */}
             <div className="relative z-10 mt-[6vw] md:mt-0 flex justify-end">
-              <svg 
-                width="24" 
-                height="24" 
-                viewBox="0 0 24 24" 
-                fill="none" 
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
                 className="opacity-50 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300"
               >
-                <path d="M5 12h14M12 5l7 7-7 7" stroke="#F63D18" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M5 12h14M12 5l7 7-7 7" stroke="#F63D18" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
           </div>

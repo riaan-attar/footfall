@@ -20,7 +20,7 @@ export default function Founders() {
             </div>
             <div className="right w-full">
                 <div className="aboutHeading overflow-hidden pb-[3vw] md:pb-0">
-                    <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase">
+                    <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase title-hover-outline cursor-default">
                         The Founders
                     </h1>
                 </div>

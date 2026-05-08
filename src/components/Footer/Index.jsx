@@ -35,7 +35,7 @@ function Footer() {
                     <div className="aboutHeading flex items-center overflow-hidden pb-[3vw] md:pb-0">
                         <h1 className={`footText ${styles.footText} text-[9vw] leading-[10vw] tracking-tighter 
                             md:text-[6.8vw] md:leading-[7vw] md:tracking-normal
-                            uppercase`}
+                            uppercase title-hover-outline cursor-default`}
                         >
                             let&apos;s create
                         </h1>
@@ -118,11 +118,21 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-
-                <UnderLine marginBottom='2vw' marginTop='8vw' />
-                <h5 className="text-[4vw] md:text-[.9vw] pt-[8vw] md:pt-0 pb-[2vw] text-zinc-500 font-semibold tracking-wider">Footfall Marketing &copy; 2024</h5>
             </div>
         </div>
+        {/* <div className="w-full bg-white border-t border-zinc-100 px-[6vw] md:px-[4vw] py-[6vw] md:py-[2vw]">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                <h5 className="text-[3vw] md:text-[.8vw] text-zinc-400 font-semibold tracking-widest uppercase">
+                    Footfall Marketing &copy; 2024
+                </h5>
+                <h5 className="text-[3vw] md:text-[.8vw] text-zinc-400 font-semibold tracking-widest uppercase flex items-center gap-2">
+                    Developed by 
+                    <a href="https://riaanattar.me" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#F63D18] transition-colors underline decoration-1 underline-offset-4 font-bold">
+                        Riaan Attar
+                    </a>
+                </h5>
+            </div>
+        </div> */}
     </div>
   )
 }

@@ -153,7 +153,7 @@ function Project() {
                 className="text-[9vw] leading-[10vw] tracking-tighter
                 md:text-[6vw] font-[PlinaReg] md:leading-[6vw] 
                 md:tracking-normal
-                uppercase"
+                uppercase title-hover-outline cursor-default"
               >
                 our Projects
               </h1>

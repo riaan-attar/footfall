@@ -40,3 +40,13 @@
     height: 4px;
     border-radius: 50px;
   }
+
+.title-hover-outline {
+    transition: all 0.5s ease;
+}
+
+.title-hover-outline:hover {
+    font-family: 'silkSerif' !important;
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent !important;
+}
