@@ -19,6 +19,12 @@ function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
+    // Ensure the page always starts at the top on load (Hero section)
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 300);
     };

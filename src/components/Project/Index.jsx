@@ -130,16 +130,16 @@ function Project() {
   return (
     <div 
       className="page3 relative w-full min-h-[100vh] 
-      px-[4vw] py-[10vw]
-      sm:px-[4vw]"
+      px-[6vw] py-[4vw]
+      md:px-[4vw] md:py-[10vw]"
     >
         <div  
-          className=' sm:flex gap-[5vw] '
+          className=' flex flex-row items-baseline gap-[4vw] md:gap-[5vw] '
         >
           <div className="left">
-            <div className=" sm:pl-[14vw] ">
-                <div className="font-[silkSerif] text-[4.6vw] 
-                    sm:text-[2.6vw] sm:leading-[4vw]"
+            <div className=" md:pl-[14vw] ">
+                <div className="font-[silkSerif] text-[8vw] mb-0 md:mb-0
+                    md:text-[2.6vw] md:leading-[4vw]"
                 >
                     <h2>02</h2>
                 </div>             
@@ -147,12 +147,12 @@ function Project() {
           </div>
           <div className="w-full right">
             <div 
-              className="aboutHeading overflow-hidden pb-[4vw] sm:pb-0 "
+              className="aboutHeading overflow-hidden pb-[4vw] md:pb-0 "
             >
               <h1 
                 className="text-[9vw] leading-[10vw] tracking-tighter
-                sm:text-[6vw] font-[PlinaReg] sm:leading-[6vw] 
-                sm:tracking-normal
+                md:text-[6vw] font-[PlinaReg] md:leading-[6vw] 
+                md:tracking-normal
                 uppercase"
               >
                 our Projects
@@ -164,68 +164,68 @@ function Project() {
         </div>
         {/* Project container 1st row*/}
         <div 
-          className="mt-[2vw] w-full sm:flex 
-          items-start sm:gap-8 pt-[6vw] sm:pt-0"
+          className="mt-[2vw] w-full flex flex-col md:flex-row 
+          items-start gap-12 md:gap-8 pt-[6vw] md:pt-0"
         >
           {/* Image*/}
-          <div className="firstCol sm:w-[22%] "
+          <div className="firstCol w-full md:w-[22%] "
             >
-            <div className='sm:mb-[1.6vw]'>
-              <h2 className='text-[5vw] mb-[7vw] sm:mb-0 sm:text-[2vw] font-[PlinaReg] uppercase 
-                sm:tracking-tight sm:leading-[2vw]'
+            <div className='md:mb-[1.6vw]'>
+              <h2 className='text-[8vw] mb-[4vw] md:mb-0 md:text-[2vw] font-[PlinaReg] uppercase 
+                md:tracking-tight md:leading-[2vw]'
               >
                 Olga prudka
               </h2>
             </div>
               <div id="imageContainer"
                 ref={wrappers} 
-                className={`imageContainer ${styles.imageContainer} sm:ml-0 
-                w-[55vw] h-[80vw]
-                sm:w-[20vw] sm:h-[25vw] relative overflow-hidden `}
+                className={`imageContainer ${styles.imageContainer} md:ml-0 
+                w-full h-[120vw]
+                md:w-[20vw] md:h-[25vw] relative overflow-hidden `}
               > 
                 <img src='https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800' alt="image1"
-                  className="inline-block sm:hidden w-full h-full object-cover"  
+                  className="inline-block md:hidden w-full h-full object-cover"  
                 />
                 {/* <img src="https://obys.agency/wp-content/uploads/2023/08/Olga_Prudka_2.png" 
                   alt="image1" className="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
                 />   */}
               </div>
-            <div className=' flex mt-[7vw] sm:mt-[1.6vw] font-[PlinaReg] text-[3vw]  
-              sm:text-[.8vw] items-start justify-between 
-              gap-8 border-b-[1px] border-black pb-[6vw] sm:pb-[1.6vw]'
+            <div className=' flex mt-[7vw] md:mt-[1.6vw] font-[PlinaReg] text-[3vw]  
+              md:text-[.8vw] items-start justify-between 
+              gap-8 border-b-[1px] border-black pb-[6vw] md:pb-[1.6vw]'
             >
               <h5 className='whitespace-'>Logo design, Website design, Development</h5>
               <h5>2023</h5>  
             </div> 
           </div>
           {/* Image*/}
-          <div className="secondCol sm:w-2/5">
-            <div className='mb-[1.6vw]'>
-              <h2 className='text-[5vw] mt-[7vw] sm:mt-0 mb-[7vw] sm:mb-0 sm:text-[2vw] font-[PlinaReg] 
-              uppercase sm:tracking-tight sm:leading-[2vw]'>aim</h2>
+          <div className="secondCol w-full md:w-2/5">
+            <div className='md:mb-[1.6vw]'>
+              <h2 className='text-[8vw] mt-[4vw] md:mt-0 mb-[4vw] md:mb-0 md:text-[2vw] font-[PlinaReg] 
+              uppercase md:tracking-tight md:leading-[2vw]'>aim</h2>
             </div>
             <div  
               id="imageContainer"
               ref={wrapper3} 
-              className={`imageContainer ${styles.imageContainer} sm:ml-0 w-[55vw]  h-[80vw]
-              sm:w-[36vw] sm:h-[40vw] relative overflow-hidden `}
+              className={`imageContainer ${styles.imageContainer} md:ml-0 w-full h-[100vw]
+              md:w-[36vw] md:h-[40vw] relative overflow-hidden `}
             > 
               <img src='https://images.unsplash.com/photo-1481481600674-e9314d4ce14f?auto=format&fit=crop&w=800' alt="image1"
-                className="inline-block sm:hidden w-full h-full object-cover"  
+                className="inline-block md:hidden w-full h-full object-cover"  
               />
                 {/* <img src="https://obys.agency/wp-content/uploads/2023/08/Olga_Prudka_2.png" 
                   alt="image1" className="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
                 />  */}
             </div>             
-            <div className='flex mt-[7vw] sm:mt-[1.6vw] font-[PlinaReg] text-[3vw] sm:text-[.8vw] items-start justify-between 
-              border-b-[1px] border-black pb-[6vw] sm:pb-[1.6vw]'
+            <div className='flex mt-[7vw] md:mt-[1.6vw] font-[PlinaReg] text-[3vw] md:text-[.8vw] items-start justify-between 
+              border-b-[1px] border-black pb-[6vw] md:pb-[1.6vw]'
             >
               <h5>Logo design, Website design, Development</h5>
               <h5>2024</h5>  
             </div>
           </div>
           {/* button*/}
-          <div className="thirdCol hidden sm:inline-block relative ">
+          <div className="thirdCol hidden md:inline-block relative ">
             <div className={`page3Circle ${styles.page3Circle}  relative w-[22vw] h-[22vw] border 
               rounded-full mt-[26vw] ml-[8vw] flex items-center justify-center`}
             >
@@ -245,9 +245,9 @@ function Project() {
         </div>
 
         {/* Project container 2nd row */}
-        <div className="secondRow mt-[2vw] w-full sm:flex items-start gap-8">
+        <div className="secondRow mt-[12vw] md:mt-[2vw] w-full flex flex-col md:flex-row items-start gap-12 md:gap-8">
           {/* button*/}
-          <div className="firstCol hidden sm:inline-block relative">
+          <div className="firstCol hidden md:inline-block relative">
             <div className=' mt-[0vw] ml-[0vw] relative'>
               <div className={`button2 ${styles.button2} relative w-[20vw] h-[20vw] border rounded-full `} data-hover-text="">
                 <span className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 -rotate-45'>
@@ -267,36 +267,36 @@ function Project() {
             </div>
           </div>
           {/* Image*/}
-          <div className="secondCol sm:w-2/5 mt-[4vw] ">
-            <div className='mb-[1.6vw]'>
-              <h2 className='text-[5vw] mt-[7vw] sm:mt-0 mb-[7vw] sm:mb-0 sm:text-[2vw] font-[PlinaReg] uppercase sm:tracking-tight sm:leading-[2vw]'>Ochi</h2>
+          <div className="secondCol w-full md:w-2/5 md:mt-[4vw] ">
+            <div className='md:mb-[1.6vw]'>
+              <h2 className='text-[8vw] mt-[4vw] md:mt-0 mb-[4vw] md:mb-0 md:text-[2vw] font-[PlinaReg] uppercase md:tracking-tight md:leading-[2vw]'>Ochi</h2>
             </div>
             <div id="imageContainer"
               ref={wrapper2}
-              className={`imageContainer ${styles.imageContainer} sm:ml-0 
-              w-[55vw] h-[80vw]
-              sm:w-[36vw] sm:h-[40vw] relative overflow-hidden `}
+              className={`imageContainer ${styles.imageContainer} md:ml-0 
+              w-full h-[100vw]
+              md:w-[36vw] md:h-[40vw] relative overflow-hidden `}
             > 
               <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800" alt="image1"
-                 className="inline-block sm:hidden w-full h-full object-cover"  
+                 className="inline-block md:hidden w-full h-full object-cover"  
               />
               {/* <img src="https://obys.agency/wp-content/uploads/2022/06/OCHI_2-1.png" 
                 alt="image1" className="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
               />  */}
             </div>
-            <div className='flex mt-[7vw] sm:mt-[1.6vw] font-[PlinaReg] text-[3vw] 
-              sm:text-[.8vw] items-start justify-between 
-              gap-8 border-b-[1px] border-black  pb-[6vw] sm:pb-[1.6vw]'
+            <div className='flex mt-[7vw] md:mt-[1.6vw] font-[PlinaReg] text-[3vw] 
+              md:text-[.8vw] items-start justify-between 
+              gap-8 border-b-[1px] border-black  pb-[6vw] md:pb-[1.6vw]'
             >
               <h5 className=''>Website design, Development</h5>
               <h5>2022</h5>  
             </div> 
           </div>
           {/* Image*/}
-          <div className="thirdCol">
-            <div className='mb-[1.6vw]'>
-                <h2 className='text-[5vw] mt-[7vw] sm:mt-0 mb-[7vw] sm:mb-0 sm:text-[2vw] 
-                  font-[PlinaReg] capitalize sm:tracking-tight sm:leading-[2vw]'
+          <div className="thirdCol w-full">
+            <div className='md:mb-[1.6vw]'>
+                <h2 className='text-[8vw] mt-[4vw] md:mt-0 mb-[4vw] md:mb-0 md:text-[2vw] 
+                  font-[PlinaReg] capitalize md:tracking-tight md:leading-[2vw]'
                 >
                   David Laxer
                 </h2>
@@ -304,19 +304,19 @@ function Project() {
               <div 
                 id="imageContainer"
                 ref={wrapper4}
-                className={`imageContainer ${styles.imageContainer} sm:ml-0 w-[55vw] h-[80vw]
-                sm:w-[30vw] sm:h-[38vw] relative overflow-hidden `}
+                className={`imageContainer ${styles.imageContainer} md:ml-0 w-full h-[100vw]
+                md:w-[30vw] md:h-[38vw] relative overflow-hidden `}
               > 
                 <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" alt="image1"
-                  className="inline-block sm:hidden w-full h-full object-cover"  
+                  className="inline-block md:hidden w-full h-full object-cover"  
                 />
                 {/* <img src="https://obys.agency/wp-content/uploads/2023/08/Laxer_2.png" 
                   alt="image1" className="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
                 />  */}
               </div>
-              <div className='flex mt-[7vw] sm:mt-[1.6vw] font-[PlinaReg] text-[3vw] 
-                sm:text-[.8vw] items-start justify-between 
-                border-b-[1px] border-black  pb-[6vw] sm:pb-[1.6vw]'
+              <div className='flex mt-[7vw] md:mt-[1.6vw] font-[PlinaReg] text-[3vw] 
+                md:text-[.8vw] items-start justify-between 
+                border-b-[1px] border-black  pb-[6vw] md:pb-[1.6vw]'
               >
                 <h5>Website design, Development</h5>
                 <h5>2023</h5>  
@@ -325,30 +325,30 @@ function Project() {
         </div>
 
         {/* Project container 3rd row */}
-        <div className="secondRow mt-[2vw] w-full sm:flex items-start gap-8 ">
+        <div className="secondRow mt-[12vw] md:mt-[2vw] w-full flex flex-col md:flex-row items-start gap-12 md:gap-8 ">
           {/* Image*/}
-          <div className="thirdFirstCol sm:w-[22%] sm:-mt-[10vw] ">
-            <div className='mb-[1.6vw]'>
-              <h2 className='text-[5vw] mt-[7vw] sm:mt-0 mb-[7vw] sm:mb-0 sm:text-[2vw] 
-                font-[PlinaReg] uppercase sm:tracking-tight sm:leading-[2vw]'
+          <div className="thirdFirstCol w-full md:w-[22%] md:-mt-[10vw] ">
+            <div className='md:mb-[1.6vw]'>
+              <h2 className='text-[8vw] mt-[4vw] md:mt-0 mb-[4vw] md:mb-0 md:text-[2vw] 
+                font-[PlinaReg] uppercase md:tracking-tight md:leading-[2vw]'
               >Eminente</h2>
             </div>
             <div 
               id="imageContainer"
               ref={wrapper5}
-              className={`imageContainer ${styles.imageContainer} sm:ml-0 w-[55vw] h-[80vw]
-              sm:w-[20vw] sm:h-[25vw] relative overflow-hidden `}
+              className={`imageContainer ${styles.imageContainer} md:ml-0 w-full h-[120vw]
+              md:w-[20vw] md:h-[25vw] relative overflow-hidden `}
             > 
               <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800" alt="image1"
-                 className="inline-block sm:hidden w-full h-full object-cover"  
+                 className="inline-block md:hidden w-full h-full object-cover"  
               />
               {/* <img src="https://obys.agency/wp-content/uploads/2023/11/%C3%89minente-_img1-x2.png" 
                 alt="image1" className="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
               />  */}
             </div>
-            <div className='flex mt-[7vw] sm:mt-[1.6vw] font-[PlinaReg] text-[3vw] 
-              sm:text-[.8vw] items-start justify-between 
-              gap-8 border-b-[1px] border-black pb-[6vw] sm:pb-[1.6vw]'
+            <div className='flex mt-[7vw] md:mt-[1.6vw] font-[PlinaReg] text-[3vw] 
+              md:text-[.8vw] items-start justify-between 
+              gap-8 border-b-[1px] border-black pb-[6vw] md:pb-[1.6vw]'
             >
               <h5 className=''>Logo design, Website design, Development</h5>
               <h5>2023</h5>  
@@ -356,7 +356,7 @@ function Project() {
           </div>
           {/* button*/}
           <div className="thirdSecondCol w-2/5">
-            <div className=' mt-[30vw] ml-[14vw] hidden sm:inline-block relative'>
+            <div className=' mt-[30vw] ml-[14vw] hidden md:inline-block relative'>
               <div className={`button3  relative w-[22vw] h-[22vw] border rounded-full `} data-hover-text="">
                 <span className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 -rotate-90'>
                 <svg className="button__arrow" width="6vw" height="6vw" viewBox="0 0 91 118" fill="none">
@@ -375,24 +375,24 @@ function Project() {
             </div>
           </div>
           {/* Image*/}
-          <div className="thirdThirdCol sm:mt-[8vw]">
-            <div className='sm:mb-[1.6vw]'>
-                <h2 className='text-[5vw] mt-[7vw] sm:mt-0 mb-[7vw] sm:mb-0 sm:text-[2vw] font-[PlinaReg] uppercase sm:tracking-tight sm:leading-[2vw]'>Makhno</h2>
+          <div className="thirdThirdCol w-full md:mt-[8vw]">
+            <div className='md:mb-[1.6vw]'>
+                <h2 className='text-[8vw] mt-[4vw] md:mt-0 mb-[4vw] md:mb-0 md:text-[2vw] font-[PlinaReg] uppercase md:tracking-tight md:leading-[2vw]'>Makhno</h2>
               </div>
               <div id="imageContainer"
               ref={wrapper6}
-                className={`imageContainer ${styles.imageContainer} sm:ml-0 realtive w-[55vw] h-[80vw]
-                sm:w-[30vw] sm:h-[38vw] relative overflow-hidden `}
+                className={`imageContainer ${styles.imageContainer} md:ml-0 realtive w-full h-[100vw]
+                md:w-[30vw] md:h-[38vw] relative overflow-hidden `}
               > 
                 <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800" alt="image1"
-                  className="inline-block sm:hidden w-full h-full object-cover"  
+                  className="inline-block md:hidden w-full h-full object-cover"  
                 />
                 {/* <img src="https://obys.agency/wp-content/uploads/2023/12/Makhno_Hover.png" 
                   alt="image1" className="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
                 />  */}
               </div>
-              <div className='flex  mt-[7vw] sm:mt-[1.6vw] font-[PlinaReg] text-[3vw] sm:text-[.8vw] items-start justify-between 
-                border-b-[1px] border-black pb-[6vw] sm:pb-[1.6vw]'
+              <div className='flex  mt-[7vw] md:mt-[1.6vw] font-[PlinaReg] text-[3vw] md:text-[.8vw] items-start justify-between 
+                border-b-[1px] border-black pb-[6vw] md:pb-[1.6vw]'
               >
                 <h5>Website design, Development</h5>
                 <h5>2023</h5>  

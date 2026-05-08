@@ -65,22 +65,22 @@ function Loader() {
     <div>
         <div 
             className="loader w-full h-full bg-[#ffffff] fixed z-[9] font-[PlinaReg] 
-            px-[5vw] py-[40vw] leading-[7.8vw] text-[7.4vw] tracking-tighter
-            sm:py-[18vw] sm:px-[6vw]  sm:leading-[7vw] sm:tracking-tight sm:text-[7vw]
+            px-[5vw] py-[40vw] leading-[10vw] text-[9vw] tracking-tighter
+            md:py-[18vw] md:px-[6vw]  md:leading-[7vw] md:tracking-tight md:text-[7vw]
             xl:text-[5.8vw] xl:leading-[6vw] xl:py-[10vw]"
         >
             <div 
                 className={`line ${styles.line} flex flex-col items-start uppercase
-                sm:flex-row sm:items-center sm:justify-start gap-[2vw]
+                md:flex-row md:items-center md:justify-start gap-[2vw]
                 
                 `}
             >
                 <div 
                     className={`part1 ${styles.part1} flex  gap-[2.5vw]
-                    items-center justify-center sm:gap-[1vw]
-                    font-[silkSerif] text-[4.2vw] leading-[4.5vw] tracking-wide 
-                    sm:items-start
-                    sm:text-[2.4vw]`}
+                    items-center justify-center md:gap-[1vw]
+                    font-[silkSerif] text-[8vw] leading-[8vw] tracking-wide 
+                    md:items-start
+                    md:text-[2.4vw] md:leading-[4.5vw]`}
                 >
                     <h5 className='w-[5vw] text-right'>00</h5>
                     <h4>- 100</h4>
@@ -92,7 +92,7 @@ function Loader() {
             </div>
             <div 
                 className={` line ${styles.line} flex 
-                sm:items-center sm:justify-start 
+                md:items-center md:justify-start 
                 gap-[1.5vw] uppercase`}
             >
                 <h1>
@@ -104,11 +104,11 @@ function Loader() {
             </div>
             <div 
                 className={`line ${styles.line}  
-                text-[3.5vw] mt-[14vw] tracking-tight
-                sm:text-[.8vw] sm:tracking-wide leading-none sm:w-[30vw] sm:mt-[4vw] 
-                flex flex-col sm:items-end justify-center`}
+                text-[5vw] mt-[14vw] tracking-tight
+                md:text-[.8vw] md:tracking-wide leading-[6vw] md:leading-none md:w-[30vw] md:mt-[4vw] 
+                flex flex-col md:items-end justify-center`}
             >
-                <h6 className='sm:w-[5.6vw] sm:text-left'>
+                <h6 className='md:w-[5.6vw] md:text-left'>
                     Please wait 
                 </h6>
                 <h6>

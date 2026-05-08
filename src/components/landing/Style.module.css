@@ -84,8 +84,8 @@
 @media screen and (max-width: 768px) {
     .ctaBtnPrimary,
     .ctaBtnOutline {
-        font-size: clamp(9px, 2.8vw, 12px);
-        padding: 0.5em 1em;
+        font-size: clamp(10px, 3.5vw, 14px);
+        padding: 0.6em 1.2em;
         gap: 0.35em;
     }
 }

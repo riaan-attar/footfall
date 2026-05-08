@@ -51,41 +51,38 @@ function Landing() {
         )}
 
         <div
-          className="relative px-[4vw] py-[16vw]
-          sm:py-[3vw] sm:px-[18vw] space-y-2
-          sm:flex sm:flex-row sm:items-start sm:gap-16 z-20 pointer-events-none"
+          className="relative px-[6vw] pt-[25vw] pb-[6vw]
+          md:py-[6vw] md:px-[12vw] 
+          flex flex-col md:flex-row md:items-start md:gap-16 z-20 pointer-events-none"
         >
           <div
-            className={`firstword ${styles.firstword} font-[silkSerif] text-[5vw] sm:text-[3.6vw] 
-            sm:leading-[6vw] pointer-events-auto`}
+            className={`firstword ${styles.firstword} font-[silkSerif] text-[8vw] md:text-[3.6vw] 
+            md:leading-[6vw] pointer-events-auto mb-4 md:mb-0`}
           >
             <h4>
               01
             </h4>
           </div>
-          <div className="text-[10vw] leading-[10vw] tracking-tighter
-            sm:text-[6vw] uppercase font-[PlinaReg] sm:leading-[6vw] sm:tracking-normal pointer-events-auto"
+          <div className="text-[13vw] leading-[13vw] tracking-tighter
+            md:text-[6vw] uppercase font-[PlinaReg] md:leading-[6.5vw] md:tracking-normal pointer-events-auto"
           >
             <div className={`hero ${styles.hero}`} id="hero1">
-              <h1>
-                We Design
-              </h1>
+              <h1>We Design</h1>
             </div>
             <div className={`hero ${styles.hero}`} id="hero2">
-              <h1>
-                Unique</h1>
+              <h1>Unique</h1>
             </div>
             <div className={`hero ${styles.hero} relative z-[999] `} id="hero3">
-              <h2 className="">Web</h2>
-              <h3>/</h3>
-              <h2>Graphic</h2>
+              <h2 className="mr-[2vw] md:mr-0">Web</h2>
+              <h3 className="hidden md:inline-block">/</h3>
+              <h2 className="md:ml-0">Graphic</h2>
             </div>
             <div className={`hero ${styles.hero}`} id="hero4">
               <h1>Experience</h1>
             </div>
 
             {/* CTA Buttons */}
-            <div className={`${styles.ctaButtons} flex flex-row gap-[3vw] sm:gap-[1.2vw] mt-[6vw] sm:mt-[2.5vw]`}>
+            <div className={`${styles.ctaButtons} flex flex-col md:flex-row gap-[4vw] md:gap-[1.2vw] mt-[10vw] md:mt-[3vw] items-start`}>
               <button
                 id="hero-contact-btn"
                 onClick={handleContactScroll}

@@ -8,19 +8,19 @@ export default function Founders() {
   const textRef = useRef(null);
 
   return (
-    <section ref={sectionRef} className="w-full bg-white pt-[6vw] pb-[10vw]">
+    <section ref={sectionRef} className="w-full bg-white pt-[6vw] pb-[10vw] md:pb-[2vw]">
        {/* Standard Site Section Header */}
-       <div className="sm:flex gap-[5vw] w-full px-[4vw] sm:px-[4vw] mb-[8vw]">
+       <div className="flex flex-row items-baseline gap-[4vw] md:gap-[5vw] w-full px-[6vw] md:px-[4vw] pt-[6vw] md:pt-[0vw] mb-[8vw]">
             <div className="left">
-                <div className="sm:pl-[14vw]">
-                    <div className="font-[silkSerif] text-[4.6vw] sm:text-[2.6vw] sm:leading-[4vw]">
+                <div className="md:pl-[14vw]">
+                    <div className="font-[silkSerif] text-[8vw] mb-0 md:mb-0 md:text-[2.6vw] md:leading-[4vw]">
                         <h2>06</h2>
                     </div>             
                 </div>
             </div>
             <div className="right w-full">
-                <div className="aboutHeading overflow-hidden pb-[3vw] sm:pb-0">
-                    <h1 className="text-[8vw] leading-[10vw] tracking-tighter sm:text-[6vw] font-[PlinaReg] sm:leading-[6vw] sm:tracking-normal uppercase">
+                <div className="aboutHeading overflow-hidden pb-[3vw] md:pb-0">
+                    <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase">
                         The Founders
                     </h1>
                 </div>
@@ -28,7 +28,7 @@ export default function Founders() {
             </div>
         </div>
 
-       <div className="w-full px-[4vw] sm:px-[14vw] mx-auto flex flex-col md:flex-row items-center gap-10 lg:gap-20">
+       <div className="w-full px-[6vw] md:px-[14vw] mx-auto flex flex-col md:flex-row items-center gap-10 lg:gap-20">
           
           {/* Parallax Image Left */}
           <div className="w-full md:w-[45%] aspect-[4/5] relative overflow-hidden bg-black rounded-lg" ref={maskRef}>

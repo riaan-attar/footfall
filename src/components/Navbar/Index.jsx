@@ -1,9 +1,11 @@
-
+import { useState } from 'react';
 import styles from './Style.module.css'
 import logo from '../../assets/image/f.svg'
 import { motion, useMotionValue } from 'framer-motion'
 
 function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const data = [
     { title: 'Home',        target: '.page1' },
     { title: 'Works',       target: '.page3' },
@@ -43,12 +45,25 @@ function Navbar() {
   return (
     <div className={`w-full sticky top-0 z-50 ${styles.navbarWrapper}`}>
       <div className="header 
-        flex sm:items-center justify-between 
-        px-[4vw] py-[3vw]
-        sm:px-[3vw] sm:py-[1.2vw]"
+        flex md:items-center justify-between 
+        px-[4vw] py-[4vw]
+        md:px-[3vw] md:py-[1.2vw]"
       >
         <div className="first flex items-center gap-[2.2vw]">
-          <div>
+          <div onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden cursor-pointer p-2 -ml-2">
+            <svg className="menu-opener__square" width="16" height="16" viewBox="0 0 12 12" fill="none">
+              <rect y="10" width="2" height="2" fill="currentColor"></rect>
+              <rect y="5" width="2" height="2" fill="currentColor"></rect>
+              <rect width="2" height="2" fill="currentColor"></rect>
+              <rect x="5" y="10" width="2" height="2" fill="currentColor"></rect>
+              <rect x="5" y="5" width="2" height="2" fill="currentColor"></rect>
+              <rect x="5" width="2" height="2" fill="currentColor"></rect>
+              <rect x="10" y="10" width="2" height="2" fill="currentColor"></rect>
+              <rect x="10" y="5" width="2" height="2" fill="currentColor"></rect>
+              <rect x="10" width="2" height="2" fill="currentColor"></rect>
+            </svg>
+          </div>
+          <div className="hidden md:block">
             <svg className="menu-opener__square" width="12" height="12" viewBox="0 0 12 12" fill="none">
               <rect y="10" width="2" height="2" fill="currentColor"></rect>
               <rect y="5" width="2" height="2" fill="currentColor"></rect>
@@ -67,7 +82,7 @@ function Navbar() {
         </div>
 
         {/* Desktop Nav Links */}
-        <div className='navLinks hidden sm:flex items-center gap-[0.2vw]'>
+        <div className='navLinks hidden md:flex items-center gap-[0.2vw]'>
           {data.map((item, index) => {
             const x = useMotionValue(0);
             const y = useMotionValue(0);
@@ -93,7 +108,7 @@ function Navbar() {
         </div>
 
         {/* Mobile: logo right + hamburger implied by dots on left */}
-        <div className="mobileContact sm:hidden">
+        <div className="mobileContact md:hidden">
           <a
             href="tel:+919999999999"
             className={styles.mobileCallBtn}
@@ -102,6 +117,25 @@ function Navbar() {
           </a>
         </div>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isMobileMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-white shadow-xl border-t border-zinc-100 flex flex-col md:hidden z-50">
+          {data.map((item, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                handleNavClick(item.target);
+                setIsMobileMenuOpen(false);
+              }}
+              className="text-left w-full px-[6vw] py-[4vw] border-b border-zinc-50 font-semibold uppercase tracking-widest text-[4.5vw] text-zinc-800"
+            >
+              {item.title}
+            </button>
+          ))}
+        </div>
+      )}
+
     </div>
   )
 }
