@@ -6,6 +6,29 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Shared scroll-reveal helper used across the site
+export function revealOnScroll(targets, options = {}) {
+  const els = gsap.utils.toArray(targets);
+  els.forEach((el) => {
+    gsap.fromTo(
+      el,
+      { opacity: 0, y: options.y ?? 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: options.duration ?? 0.8,
+        ease: options.ease ?? 'power3.out',
+        delay: options.delay ?? 0,
+        scrollTrigger: {
+          trigger: el,
+          start: options.start ?? 'top 88%',
+          toggleActions: 'play none none reset', // re-plays every time section enters
+        },
+      }
+    );
+  });
+}
+
 const About = () => {
   const description = "We are a data-driven marketing collective dedicated to building performance engines that empower e-commerce and local businesses to dominate their markets. With deep expertise in Google Ads, Meta Ads, and full-funnel CRO, we craft scalable strategies that turn clicks into measurable revenue.";
   
@@ -44,30 +67,72 @@ const About = () => {
   ];
 
   const numbersRef = useRef(null);
+  const sectionRef = useRef(null);
 
   useGSAP(() => {
+    // ── Number counters: re-animate every time the section enters the viewport ──
     const elements = gsap.utils.toArray('.achievement-number');
-    
+
     elements.forEach((el, index) => {
       const target = achievements[index].value;
       const isFloat = achievements[index].isFloat;
+
+      ScrollTrigger.create({
+        trigger: numbersRef.current,
+        start: 'top 80%',
+        // onEnter AND onEnterBack both fire the counter so it re-runs on every visit
+        onEnter: () => runCounter(el, target, isFloat),
+        onEnterBack: () => runCounter(el, target, isFloat),
+      });
+    });
+
+    function runCounter(el, target, isFloat) {
+      // Reset to 0 first so the animation always starts fresh
+      el.innerHTML = isFloat ? '0.0' : '0';
       const obj = { val: 0 };
-      
       gsap.to(obj, {
         val: target,
         duration: 2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: numbersRef.current,
-          start: "top 80%", // trigger when the top of the container is 80% down the viewport
-          once: true,
-        },
+        ease: 'power2.out',
         onUpdate: () => {
           el.innerHTML = isFloat ? obj.val.toFixed(1) : Math.floor(obj.val);
-        }
+        },
       });
+    }
+
+    // ── Scroll-reveal for About section elements ──
+    const revealItems = [
+      { sel: '.about-description', y: 40, delay: 0 },
+      { sel: '.about-main-img',    y: 60, delay: 0.1 },
+      { sel: '.about-breakout',    y: 50, delay: 0.15 },
+      { sel: '.about-secondary-img', y: 60, delay: 0.2 },
+      { sel: '.about-companies',   y: 30, delay: 0 },
+      { sel: '.about-stats-block', y: 50, delay: 0 },
+      { sel: '.about-content-section', y: 50, delay: 0, stagger: 0.15 },
+    ];
+
+    revealItems.forEach(({ sel, y, delay, stagger }) => {
+      const els = gsap.utils.toArray(sel);
+      if (!els.length) return;
+      gsap.fromTo(
+        els,
+        { opacity: 0, y },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.85,
+          ease: 'power3.out',
+          delay,
+          stagger: stagger ?? 0,
+          scrollTrigger: {
+            trigger: els[0],
+            start: 'top 88%',
+            toggleActions: 'play none none reset',
+          },
+        }
+      );
     });
-  }, { scope: numbersRef });
+  }, { scope: sectionRef });
 
   const contentSections = [
     {
@@ -81,7 +146,7 @@ const About = () => {
   ];
 
   return (
-    <section className="w-full bg-white pt-[6vw] pb-[6vw] md:pt-[6vw] md:pb-[2vw]">
+    <section ref={sectionRef} className="w-full bg-white pt-[6vw] pb-[6vw] md:pt-[6vw] md:pb-[2vw]">
       {/* Existing Original Header Structure */}
       <div className="flex flex-row items-baseline gap-[4vw] md:gap-[5vw] w-full px-[6vw] md:px-[4vw] mb-[8vw]">
         <div className="left">
@@ -93,7 +158,7 @@ const About = () => {
         </div>
         <div className="right w-full">
           <div className="aboutHeading overflow-hidden pb-[3vw] md:pb-0">
-            <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase title-hover-outline cursor-default">
+            <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase cursor-default">
               About Footfall Marketing
             </h1>
           </div>
@@ -102,7 +167,7 @@ const About = () => {
       </div>
 
       <div className="w-full px-[6vw] md:px-[4vw] mx-auto">
-        <div className="mb-14 flex flex-col gap-5 lg:w-2/3">
+        <div className="about-description mb-14 flex flex-col gap-5 lg:w-2/3">
           <p className="text-lg font-sans text-zinc-500 md:text-xl leading-relaxed">
             {description}
           </p>
@@ -112,10 +177,10 @@ const About = () => {
           <img
             src={mainImage.src}
             alt={mainImage.alt}
-            className="size-full max-h-[620px] rounded-xl object-cover lg:col-span-2"
+            className="about-main-img size-full max-h-[620px] rounded-xl object-cover lg:col-span-2"
           />
           <div className="flex flex-col gap-7 md:flex-row lg:flex-col">
-            <div className="flex flex-col justify-between gap-6 rounded-xl bg-gray-100 p-7 md:w-1/2 lg:w-auto">
+            <div className="about-breakout flex flex-col justify-between gap-6 rounded-xl bg-gray-100 p-7 md:w-1/2 lg:w-auto">
               <div>
                 <p className="mb-2 text-xl font-[PlinaReg] uppercase tracking-tight font-bold text-black">{breakout.title}</p>
                 <p className="text-zinc-500 font-sans">{breakout.description}</p>
@@ -134,13 +199,13 @@ const About = () => {
             <img
               src={secondaryImage.src}
               alt={secondaryImage.alt}
-              className="min-h-[300px] rounded-xl object-cover md:w-1/2 lg:min-h-0 lg:w-auto"
+              className="about-secondary-img min-h-[300px] rounded-xl object-cover md:w-1/2 lg:min-h-0 lg:w-auto"
             />
           </div>
         </div>
 
         {companies && (
-          <div className="py-8 md:py-16 overflow-hidden w-full relative">
+          <div className="about-companies py-8 md:py-16 overflow-hidden w-full relative">
             <div className="flex w-max animate-marquee">
               {/* Double mapping for infinite scroll effect */}
               {[...companies, ...companies].map((company, idx) => (
@@ -159,7 +224,7 @@ const About = () => {
           </div>
         )}
 
-        <div className="relative overflow-hidden rounded-xl bg-gray-100 p-7 md:p-16">
+        <div className="about-stats-block relative overflow-hidden rounded-xl bg-gray-100 p-7 md:p-16">
           <div className="flex flex-col gap-4 text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-[PlinaReg] uppercase tracking-tight font-bold text-black">
               {achievementsTitle}
@@ -188,7 +253,7 @@ const About = () => {
         {contentSections && contentSections.length > 0 && (
           <div className="mx-auto grid max-w-5xl gap-12 py-12 md:py-28 md:grid-cols-2 md:gap-28">
             {contentSections.map((section, idx) => (
-              <div key={section.title + idx}>
+              <div key={section.title + idx} className="about-content-section">
                 <h2 className="mb-5 text-4xl font-[PlinaReg] uppercase font-bold tracking-tight text-black">{section.title}</h2>
                 <p className="text-lg leading-relaxed whitespace-pre-line text-zinc-500 font-sans">
                   {section.content}

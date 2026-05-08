@@ -1,11 +1,36 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import UnderLine from '../Underline/Index';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Founders() {
   const sectionRef = useRef(null);
   const maskRef = useRef(null);
   const imgRef = useRef(null);
   const textRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Heading
+      gsap.fromTo('.founders-heading', { opacity: 0, y: 60 }, {
+        opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+        scrollTrigger: { trigger: '.founders-heading', start: 'top 88%', toggleActions: 'play none none reset' }
+      });
+      // Image panel
+      gsap.fromTo(maskRef.current, { opacity: 0, x: -60 }, {
+        opacity: 1, x: 0, duration: 1, ease: 'power3.out',
+        scrollTrigger: { trigger: maskRef.current, start: 'top 88%', toggleActions: 'play none none reset' }
+      });
+      // Text items stagger
+      gsap.fromTo('.founder-text', { opacity: 0, y: 40 }, {
+        opacity: 1, y: 0, duration: 0.75, ease: 'power3.out', stagger: 0.1,
+        scrollTrigger: { trigger: textRef.current, start: 'top 88%', toggleActions: 'play none none reset' }
+      });
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section ref={sectionRef} className="w-full bg-white pt-[6vw] pb-[10vw] md:pb-[2vw]">
@@ -20,7 +45,7 @@ export default function Founders() {
             </div>
             <div className="right w-full">
                 <div className="aboutHeading overflow-hidden pb-[3vw] md:pb-0">
-                    <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase title-hover-outline cursor-default">
+                    <h1 className="founders-heading text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase cursor-default">
                         The Founders
                     </h1>
                 </div>

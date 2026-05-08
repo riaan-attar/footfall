@@ -1,7 +1,11 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import AnimatedLink from '../AnimatedLink'
 import UnderLine from '../Underline/Index'
 import styles from './Style.module.css'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const data = [
     { title: "Dribbble"},
@@ -14,6 +18,24 @@ const data = [
 
 function Footer() {
   const footerRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo('.footer-heading', { opacity: 0, y: 60 }, {
+        opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+        scrollTrigger: { trigger: '.footer-heading', start: 'top 88%', toggleActions: 'play none none reset' }
+      });
+      gsap.fromTo('.footer-form-col', { opacity: 0, x: -50 }, {
+        opacity: 1, x: 0, duration: 0.9, ease: 'power3.out',
+        scrollTrigger: { trigger: '.footer-form-col', start: 'top 88%', toggleActions: 'play none none reset' }
+      });
+      gsap.fromTo('.footer-contact-col', { opacity: 0, x: 50 }, {
+        opacity: 1, x: 0, duration: 0.9, ease: 'power3.out',
+        scrollTrigger: { trigger: '.footer-contact-col', start: 'top 88%', toggleActions: 'play none none reset' }
+      });
+    }, footerRef);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <div ref={footerRef}>
@@ -33,7 +55,7 @@ function Footer() {
             <div className="w-full right font-[PlinaReg]">
                 <div>
                     <div className="aboutHeading flex items-center overflow-hidden pb-[3vw] md:pb-0">
-                        <h1 className={`footText ${styles.footText} text-[9vw] leading-[10vw] tracking-tighter 
+                        <h1 className={`footer-heading footText ${styles.footText} text-[9vw] leading-[10vw] tracking-tighter 
                             md:text-[6.8vw] md:leading-[7vw] md:tracking-normal
                             uppercase title-hover-outline cursor-default`}
                         >
@@ -52,7 +74,7 @@ function Footer() {
                 <div className="flex flex-col md:flex-row md:gap-[10vw] gap-[12vw] items-start justify-between">
                     
                     {/* Left Column: Onboarding Form */}
-                    <div className="form-col w-full md:w-[55%] mb-[16vw] md:mb-0">
+                    <div className="footer-form-col form-col w-full md:w-[55%] mb-[16vw] md:mb-0">
                         <form className="flex flex-col gap-[8vw] md:gap-[3vw]" onSubmit={(e) => e.preventDefault()}>
                             <div className="form-field flex flex-col gap-[2vw] md:gap-[1vw]">
                                 <label className="text-zinc-500 text-[3.5vw] md:text-[.9vw] uppercase tracking-widest font-semibold">Name / Company</label>
@@ -90,7 +112,7 @@ function Footer() {
                     </div>
 
                     {/* Right Column: Existing Contact Info */}
-                    <div className="contact-col w-full md:w-[35%] flex flex-col gap-[12vw] md:gap-[6vw]">
+                    <div className="footer-contact-col contact-col w-full md:w-[35%] flex flex-col gap-[12vw] md:gap-[6vw]">
                         <div className="contact-section space-y-[2vw] md:space-y-[1vw]">
                             <h3 className="text-zinc-500 text-[3.5vw] md:text-[.9vw] uppercase tracking-widest font-semibold mb-[4vw] md:mb-[2vw]">Socials</h3>
                             {data.map((item, index) => {

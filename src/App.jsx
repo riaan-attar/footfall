@@ -15,6 +15,7 @@ import Project from './components/Project/Index';
 import SmoothCursor from './components/ui/smooth-cursor';
 import Testimonials from './components/Testimonials/Index';
 import CaseStudies from './components/CaseStudies/Index';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -127,6 +128,7 @@ function App() {
           <path d="M12 19V5M5 12l7-7 7 7"/>
         </svg>
       </button>
+      <SpeedInsights />
     </>
   )
 }

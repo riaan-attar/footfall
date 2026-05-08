@@ -1,8 +1,11 @@
 import styles from './Style.module.css'
 import UnderLine from '../Underline/Index'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect, useRef} from 'react'
 import hoverEffect from 'hover-effect'
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Project() {
   let wrappers = useRef();
@@ -125,6 +128,23 @@ function Project() {
       gsap.to(".circleInpara3", { scale: 0, transformOrigin: "center center" });
     });
   })
+
+  // ── Scroll-reveal for project items ──
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Section heading
+      gsap.fromTo('.project-heading', { opacity: 0, y: 60 }, {
+        opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+        scrollTrigger: { trigger: '.project-heading', start: 'top 88%', toggleActions: 'play none none reset' }
+      });
+      // Each project column fades in with stagger
+      gsap.fromTo('.project-col-reveal', { opacity: 0, y: 80 }, {
+        opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.15,
+        scrollTrigger: { trigger: '.project-col-reveal', start: 'top 88%', toggleActions: 'play none none reset' }
+      });
+    });
+    return () => ctx.revert();
+  }, []);
   
 
   return (
@@ -149,12 +169,7 @@ function Project() {
             <div 
               className="aboutHeading overflow-hidden pb-[4vw] md:pb-0 "
             >
-              <h1 
-                className="text-[9vw] leading-[10vw] tracking-tighter
-                md:text-[6vw] font-[PlinaReg] md:leading-[6vw] 
-                md:tracking-normal
-                uppercase title-hover-outline cursor-default"
-              >
+              <h1 className="project-heading text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase cursor-default">
                 our Projects
               </h1>
             </div>
@@ -168,7 +183,7 @@ function Project() {
           items-start gap-12 md:gap-8 pt-[6vw] md:pt-0"
         >
           {/* Image*/}
-          <div className="firstCol w-full md:w-[22%] "
+          <div className="project-col-reveal firstCol w-full md:w-[22%] "
             >
             <div className='md:mb-[1.6vw]'>
               <h2 className='text-[8vw] mb-[4vw] md:mb-0 md:text-[2vw] font-[PlinaReg] uppercase 
@@ -199,7 +214,7 @@ function Project() {
             </div> 
           </div>
           {/* Image*/}
-          <div className="secondCol w-full md:w-2/5">
+          <div className="project-col-reveal secondCol w-full md:w-2/5">
             <div className='md:mb-[1.6vw]'>
               <h2 className='text-[8vw] mt-[4vw] md:mt-0 mb-[4vw] md:mb-0 md:text-[2vw] font-[PlinaReg] 
               uppercase md:tracking-tight md:leading-[2vw]'>aim</h2>

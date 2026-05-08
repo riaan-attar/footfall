@@ -1,4 +1,9 @@
 import UnderLine from '../Underline/Index';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const cases = [
   {
@@ -60,8 +65,24 @@ const cases = [
 ];
 
 export default function CaseStudies() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo('.casestudies-heading', { opacity: 0, y: 60 }, {
+        opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+        scrollTrigger: { trigger: '.casestudies-heading', start: 'top 88%', toggleActions: 'play none none reset' }
+      });
+      gsap.fromTo('.case-card', { opacity: 0, y: 80 }, {
+        opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.15,
+        scrollTrigger: { trigger: '.case-card', start: 'top 88%', toggleActions: 'play none none reset' }
+      });
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="case-studies" className="w-full bg-white pt-[6vw] pb-0">
+    <section ref={sectionRef} id="case-studies" className="w-full bg-white pt-[6vw] pb-0">
       {/* Section Header */}
       <div className="flex flex-row items-baseline gap-[4vw] md:gap-[5vw] w-full px-[6vw] md:px-[4vw] mb-[6vw]">
         <div className="left">
@@ -73,7 +94,7 @@ export default function CaseStudies() {
         </div>
         <div className="right w-full">
           <div className="aboutHeading overflow-hidden pb-[3vw] md:pb-0">
-            <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase title-hover-outline cursor-default">
+            <h1 className="casestudies-heading text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase cursor-default">
               Case Studies
             </h1>
           </div>
@@ -86,7 +107,7 @@ export default function CaseStudies() {
         {cases.map((study, i) => (
           <article
             key={i}
-            className={`group relative w-full rounded-2xl overflow-hidden flex flex-col md:flex ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+            className={`case-card group relative w-full rounded-2xl overflow-hidden flex flex-col md:flex ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
               }`}
             style={{ backgroundColor: study.color }}
           >

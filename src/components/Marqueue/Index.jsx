@@ -1,12 +1,31 @@
 import styles from './Style.module.css'
 import UnderLine from '../Underline/Index'
+import { useRef, useEffect } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+gsap.registerPlugin(ScrollTrigger)
 
 function Marqueue() {
+  const sectionRef = useRef(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo('.marqueue-heading', { opacity: 0, y: 60 }, {
+        opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+        scrollTrigger: { trigger: '.marqueue-heading', start: 'top 88%', toggleActions: 'play none none reset' }
+      })
+      gsap.fromTo('.marqueue-rows', { opacity: 0, y: 40 }, {
+        opacity: 1, y: 0, duration: 0.85, ease: 'power3.out',
+        scrollTrigger: { trigger: '.marqueue-rows', start: 'top 88%', toggleActions: 'play none none reset' }
+      })
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
 
 
   return (
-    <div>
+    <div ref={sectionRef}>
         {/* We Work With heading — same layout as Testimonials */}
         <div className="flex flex-row items-baseline gap-[4vw] md:gap-[5vw] w-full px-[6vw] md:px-[4vw] pt-[6vw] md:pt-[4vw]">
             <div className="left">
@@ -18,7 +37,7 @@ function Marqueue() {
             </div>
             <div className="right w-full">
                 <div className="overflow-hidden pb-[3vw] md:pb-0">
-                    <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase">
+                    <h1 className="marqueue-heading text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase">
                         We Work With
                     </h1>
                 </div>
@@ -28,7 +47,7 @@ function Marqueue() {
 
         <div className="page5 w-full  px-[4vw] mt-[3vw] md:px-[3vw] relative">
             {/* Repeating row */}
-            <div>
+            <div className="marqueue-rows">
               <div 
                 className={`elem whitespace-nowrap text-[9.6vw] leading-[12vw] 
                 md:text-[7vw] md:leading-[7.6vw] 

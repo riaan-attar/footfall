@@ -1,6 +1,28 @@
 import UnderLine from '../Underline/Index';
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Section heading reveal
+      gsap.fromTo('.services-heading', { opacity: 0, y: 60 }, {
+        opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+        scrollTrigger: { trigger: '.services-heading', start: 'top 88%', toggleActions: 'play none none reset' }
+      });
+      // Cards stagger reveal
+      gsap.fromTo('.service-card', { opacity: 0, y: 70 }, {
+        opacity: 1, y: 0, duration: 0.75, ease: 'power3.out', stagger: 0.12,
+        scrollTrigger: { trigger: '.service-card', start: 'top 88%', toggleActions: 'play none none reset' }
+      });
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
   const services = [
     {
       id: "01",
@@ -29,7 +51,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="w-full bg-white pt-[6vw] md:pt-[4vw] pb-0 px-[6vw] md:px-[4vw] text-black overflow-hidden">
+    <section ref={sectionRef} id="services" className="w-full bg-white pt-[6vw] md:pt-[4vw] pb-0 px-[6vw] md:px-[4vw] text-black overflow-hidden">
       {/* Section Header */}
       <div className="flex flex-row items-baseline gap-[4vw] md:gap-[5vw] w-full mb-[4vw]">
         <div className="left">
@@ -40,9 +62,13 @@ const Services = () => {
           </div>
         </div>
         <div className="right w-full">
-          <div className="aboutHeading overflow-hidden pb-[3vw] md:pb-0">
-            <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase title-hover-outline cursor-default">
-              Our Services
+          <div className="services-heading aboutHeading overflow-hidden pb-[3vw] md:pb-0">
+              <h1 
+                className="text-[9vw] leading-[10vw] tracking-tighter
+                md:text-[6vw] font-[PlinaReg] md:leading-[6vw] 
+                md:tracking-normal
+                uppercase cursor-default"
+              >Our Services
             </h1>
           </div>
           <UnderLine marginBottom="0vw" marginTop="1vw" />
@@ -53,7 +79,7 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="group relative w-full md:w-[calc(50%-2vw)] lg:w-[calc(25%-3vw)] flex flex-col justify-between min-h-[300px] md:min-h-[400px] p-[6vw] md:p-[2.5vw] rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 border border-zinc-200 bg-gray-50 hover:bg-white hover:shadow-lg"
+            className="service-card group relative w-full md:w-[calc(50%-2vw)] lg:w-[calc(25%-3vw)] flex flex-col justify-between min-h-[300px] md:min-h-[400px] p-[6vw] md:p-[2.5vw] rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 border border-zinc-200 bg-gray-50 hover:bg-white hover:shadow-lg"
           >
             {/* Background Hover Effect */}
             <div
