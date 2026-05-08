@@ -61,7 +61,7 @@ const cases = [
 
 export default function CaseStudies() {
   return (
-    <section className="w-full bg-white py-[6vw]">
+    <section id="case-studies" className="w-full bg-white py-[6vw]">
       {/* Section Header */}
       <div className="flex flex-row items-baseline gap-[4vw] md:gap-[5vw] w-full px-[6vw] md:px-[4vw] mb-[6vw]">
         <div className="left">
