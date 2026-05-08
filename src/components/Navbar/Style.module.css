@@ -1,0 +1,76 @@
+.brand_svg {
+  width: 14vw;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  min-width: 120px;
+  max-width: 180px;
+}
+
+/* Sticky navbar with frosted glass */
+.navbarWrapper {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: box-shadow 0.3s ease;
+}
+
+.navbarWrapper:hover {
+  box-shadow: 0 2px 24px 0 rgba(0,0,0,0.07);
+}
+
+/* Nav buttons */
+.navBtn {
+  position: relative;
+  font-family: 'PlinaReg', sans-serif;
+  color: #111;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.22s ease;
+}
+
+.navText {
+  position: relative;
+  display: inline-block;
+}
+
+.navText::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #F63D18;
+  transition: width 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navBtn:hover .navText::after {
+  width: 100%;
+}
+
+.navBtn:hover .navText {
+  color: #F63D18;
+}
+
+/* Mobile call button */
+.mobileCallBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  background-color: #F63D18;
+  color: #fff;
+  border-radius: 100px;
+  padding: 0.5em 1.2em;
+  font-family: 'PlinaReg', sans-serif;
+  font-size: clamp(11px, 3.2vw, 14px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.25s ease;
+}
+
+.mobileCallBtn:hover {
+  background-color: #000;
+}
