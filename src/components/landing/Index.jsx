@@ -4,27 +4,17 @@
 import styles from './Style.module.css'
 import Lanyard from '../Lanyard/Index'
 import Ballpit from '../Ballpit/Index'
+import { useState, useEffect } from 'react'
 
 function Landing() {
+  const [isMobile, setIsMobile] = useState(false);
 
-  // useEffect(() => {
-  //   document.addEventListener("mousemove", function(dets) {
-  //     gsap.to("#flag", {
-  //       x: dets.x -50,
-  //       y: dets.y - 120,
-  //     })
-  //   })
-  //   document.querySelector("#hero3").addEventListener("mouseenter", function() {
-  //     gsap.to("#flag", {
-  //       opacity: 1
-  //     })
-  //   })
-  //   document.querySelector("#hero3").addEventListener("mouseleave", function() {
-  //     gsap.to("#flag", {
-  //       opacity: 0
-  //     })
-  //   })
-  // })
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleContactScroll = () => {
     const footer = document.querySelector('.page6');
@@ -40,21 +30,25 @@ function Landing() {
         className="w-full relative min-h-screen"
       >
         {/* Lanyard - top right corner */}
-        <div className="hidden sm:block absolute top-0 right-0 z-10" style={{ width: '40vw', height: '100vh', pointerEvents: 'auto' }}>
-          <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
-        </div>
+        {!isMobile && (
+          <div className="hidden sm:block absolute top-0 right-0 z-10" style={{ width: '40vw', height: '100vh', pointerEvents: 'auto' }}>
+            <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+          </div>
+        )}
 
         {/* Ballpit Background */}
-        <div style={{ position: 'absolute', top: 0, left: 0, overflow: 'hidden', height: '100vh', width: '100%', zIndex: 1 }}>
-          <Ballpit
-            count={40}
-            gravity={0}
-            friction={0.9975}
-            wallBounce={0.95}
-            followCursor={true}
-            colors={[0xff6600, 0xffaa00, 0xff3366, 0x9933ff, 0x00ccff]}
-          />
-        </div>
+        {!isMobile && (
+          <div style={{ position: 'absolute', top: 0, left: 0, overflow: 'hidden', height: '100vh', width: '100%', zIndex: 1 }}>
+            <Ballpit
+              count={40}
+              gravity={0}
+              friction={0.9975}
+              wallBounce={0.95}
+              followCursor={true}
+              colors={[0xff6600, 0xffaa00, 0xff3366, 0x9933ff, 0x00ccff]}
+            />
+          </div>
+        )}
 
         <div
           className="relative px-[4vw] py-[16vw]

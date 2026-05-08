@@ -33,7 +33,7 @@ function App() {
   return (
     <>
       <SmoothCursor/>
-      <div className='main text-zinc-900 bg-white'>
+      <div className='main overflow-x-hidden w-full max-w-full text-zinc-900 bg-white'>
         <Loader />
         <div className='bg-white'>
           <Navbar/>
