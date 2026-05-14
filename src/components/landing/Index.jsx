@@ -23,20 +23,7 @@ function Landing() {
       <div
         className="w-full relative min-h-screen overflow-hidden"
       >
-        {/* D3 Globe - right side (desktop) / Background (mobile) */}
-        <div
-          className="flex absolute z-0 items-center justify-center pointer-events-none sm:pointer-events-auto"
-          style={{
-            top: isMobile ? '10%' : 0,
-            right: 0,
-            width: isMobile ? '100vw' : '44vw',
-            height: '100%',
-            paddingBottom: isMobile ? '0' : '8%',
-            opacity: isMobile ? 0.3 : 1, // Make it a subtle background on mobile
-          }}
-        >
-          <GlobeViewer size={isMobile ? window.innerWidth * 1.2 : 400} />
-        </div>
+
 
         <div
           className="relative px-[6vw] pt-[25vw] pb-[6vw]
@@ -93,6 +80,23 @@ function Landing() {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* D3 Globe - right side (desktop) / Below CTA (mobile) */}
+        <div
+          className="flex z-0 items-center justify-center pointer-events-auto"
+          style={{
+            position: isMobile ? 'relative' : 'absolute',
+            top: isMobile ? 'auto' : 0,
+            right: 0,
+            width: isMobile ? '100%' : '44vw',
+            height: isMobile ? 'auto' : '100%',
+            paddingBottom: isMobile ? '15vw' : '8%',
+            marginTop: isMobile ? '2vw' : 0,
+            opacity: 1,
+          }}
+        >
+          <GlobeViewer size={isMobile ? Math.min(window.innerWidth * 0.85, 350) : 400} />
         </div>
       </div>
     </div>
