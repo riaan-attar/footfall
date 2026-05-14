@@ -1,9 +1,5 @@
-// import { useGSAP } from "@gsap/react"
-// import { useEffect } from "react"
-// import Navbar from "../Navbar/Index"
 import styles from './Style.module.css'
-import Lanyard from '../Lanyard/Index'
-import Ballpit from '../Ballpit/Index'
+import CubeViewer from '../CubeViewer/Index'
 import { useState, useEffect } from 'react'
 
 function Landing() {
@@ -23,30 +19,23 @@ function Landing() {
 
   return (
     <div className=" page1  w-full">
-      {/* Navbar */}
-
       {/* Landing Page */}
       <div
         className="w-full relative min-h-screen"
       >
-        {/* Lanyard - top right corner */}
+        {/* 3D Model Viewer - top right corner (desktop only) */}
         {!isMobile && (
-          <div className="hidden sm:block absolute top-0 right-0 z-10" style={{ width: '40vw', height: '100vh', pointerEvents: 'auto' }}>
-            <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
-          </div>
-        )}
-
-        {/* Ballpit Background */}
-        {!isMobile && (
-          <div style={{ position: 'absolute', top: 0, left: 0, overflow: 'hidden', height: '100vh', width: '100%', zIndex: 1 }}>
-            <Ballpit
-              count={40}
-              gravity={0}
-              friction={0.9975}
-              wallBounce={0.95}
-              followCursor={true}
-              colors={[0xff6600, 0xffaa00, 0xff3366, 0x9933ff, 0x00ccff]}
-            />
+          <div
+            className="hidden sm:block absolute z-0"
+            style={{
+              top: 0,
+              right: '2vw',
+              width: '40vw',
+              height: '100%',
+              pointerEvents: 'auto',
+            }}
+          >
+            <CubeViewer width="100%" height="100%" />
           </div>
         )}
 
@@ -112,4 +101,3 @@ function Landing() {
 }
 
 export default Landing
-

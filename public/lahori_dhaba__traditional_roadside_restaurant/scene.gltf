@@ -1,0 +1,709 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1280,
+      "max": [
+        0.35382845997810364,
+        0.40356069803237915,
+        0.7744264602661133
+      ],
+      "min": [
+        -0.353828489780426,
+        -0.4035605788230896,
+        -0.7744264602661133
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 15360,
+      "componentType": 5126,
+      "count": 1280,
+      "max": [
+        1.0,
+        0.9999989867210388,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.9999984502792358,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1280,
+      "max": [
+        0.23374031484127045,
+        0.38481074571609497
+      ],
+      "min": [
+        0.0015292888274416327,
+        0.13779211044311523
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 10240,
+      "componentType": 5126,
+      "count": 1280,
+      "max": [
+        0.9363939762115479,
+        0.9950000047683716
+      ],
+      "min": [
+        0.004999999888241291,
+        0.004999999888241291
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 3456,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 30720,
+      "componentType": 5126,
+      "count": 8058,
+      "max": [
+        9.00388240814209,
+        7.902627944946289,
+        17.503089904785156
+      ],
+      "min": [
+        -9.00388240814209,
+        -9.404685974121094,
+        -0.3976278305053711
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 127416,
+      "componentType": 5126,
+      "count": 8058,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 20480,
+      "componentType": 5126,
+      "count": 8058,
+      "max": [
+        1.3254382610321045,
+        0.999757707118988
+      ],
+      "min": [
+        -0.572105348110199,
+        -0.004637533333152533
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 13824,
+      "componentType": 5125,
+      "count": 23688,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 224112,
+      "componentType": 5126,
+      "count": 24,
+      "max": [
+        0.25,
+        0.0873539000749588,
+        1.7000000476837158
+      ],
+      "min": [
+        -0.25,
+        -0.0873539000749588,
+        0.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 224400,
+      "componentType": 5126,
+      "count": 24,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 84944,
+      "componentType": 5126,
+      "count": 24,
+      "max": [
+        0.3024246394634247,
+        0.4858473837375641
+      ],
+      "min": [
+        0.2907489538192749,
+        0.43826162815093994
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 108576,
+      "componentType": 5125,
+      "count": 36,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 224688,
+      "componentType": 5126,
+      "count": 1142,
+      "max": [
+        0.6806488037109375,
+        0.6806467771530151,
+        0.5261660814285278
+      ],
+      "min": [
+        -0.6806488037109375,
+        -0.6806467771530151,
+        -0.5261660814285278
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 238392,
+      "componentType": 5126,
+      "count": 1142,
+      "max": [
+        0.9915376901626587,
+        0.9915088415145874,
+        1.0
+      ],
+      "min": [
+        -0.9915151000022888,
+        -0.9915104508399963,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 85136,
+      "componentType": 5126,
+      "count": 1142,
+      "max": [
+        0.48381510376930237,
+        0.38495540618896484
+      ],
+      "min": [
+        0.2609710693359375,
+        0.13819773495197296
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 94272,
+      "componentType": 5126,
+      "count": 1142,
+      "max": [
+        0.897983968257904,
+        0.9950000047683716
+      ],
+      "min": [
+        0.004999999888241291,
+        0.004999999888241291
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 108720,
+      "componentType": 5125,
+      "count": 4128,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Shahzy_S (https://sketchfab.com/shahzyprince9)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lahori-dhaba-traditional-roadside-restaurant-1f022d56a9234121b57f7897eb159548",
+      "title": "Lahori Dhaba – Traditional Roadside Restaurant"
+    },
+    "generator": "Sketchfab-17.8.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 125232,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 103408,
+      "byteOffset": 125232,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 252096,
+      "byteOffset": 228640,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 480736,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "images": [
+    {
+      "uri": "textures/Material_124_diffuse.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "diffuseTexture": {
+            "index": 0
+          },
+          "glossinessFactor": 0.4,
+          "specularFactor": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "name": "Material_124"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "SaloonChairHP_Material #124_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2,
+            "TEXCOORD_1": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object002_Material #124_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TEXCOORD_0": 7
+          },
+          "indices": 8,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Box001_Material #124_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 10,
+            "POSITION": 9,
+            "TEXCOORD_0": 11
+          },
+          "indices": 12,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "SaloonTableHP_Material #124_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 14,
+            "POSITION": 13,
+            "TEXCOORD_0": 15,
+            "TEXCOORD_1": 16
+          },
+          "indices": 17,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.6518611907958984,
+        -1.0482727279470489e-16,
+        -2.327633037306873e-32,
+        0.0,
+        0.0,
+        1.4474226057623572e-16,
+        -0.6518611907958984,
+        0.0,
+        1.0482727279470489e-16,
+        0.6518611907958984,
+        1.4474226057623572e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "84c93c5e1387444aa1a153f451f84dc8.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        7,
+        10,
+        13
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.999999999999999,
+        4.371138828673792e-08,
+        0.0,
+        0.0,
+        -4.371138828673792e-08,
+        0.999999999999999,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Dhaba "
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999929,
+        1.1920928955078042e-07,
+        0.0,
+        0.0,
+        -1.1920928955078042e-07,
+        0.9999999999999929,
+        0.0,
+        -3.848179578781128,
+        0.8832464218139648,
+        1.2186384201049805,
+        1.0
+      ],
+      "name": "SaloonChairHP"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.123233995736766e-17,
+        -1.0,
+        0.0,
+        -0.0,
+        1.0,
+        6.123233995736766e-17,
+        0.0,
+        0.0,
+        0.7743862271308899,
+        1.1920928955078125e-07,
+        1.0
+      ],
+      "name": "Object_5"
+    },
+    {
+      "mesh": 0,
+      "name": "SaloonChairHP_Material #124_0"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999929,
+        1.1920928955078042e-07,
+        0.0,
+        0.0,
+        -1.1920928955078042e-07,
+        0.9999999999999929,
+        0.0,
+        -4.76837158203125e-07,
+        0.0010104418033733964,
+        -4.76837158203125e-07,
+        1.0
+      ],
+      "name": "Object002"
+    },
+    {
+      "children": [
+        9
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.123233995736766e-17,
+        -1.0,
+        0.0,
+        -0.0,
+        1.0,
+        6.123233995736766e-17,
+        0.0,
+        0.0,
+        0.3888458013534546,
+        -0.7510290145874023,
+        1.0
+      ],
+      "name": "Object_8"
+    },
+    {
+      "mesh": 1,
+      "name": "Object002_Material #124_0"
+    },
+    {
+      "children": [
+        11
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999929,
+        1.1920928955078042e-07,
+        0.0,
+        0.0,
+        -1.1920928955078042e-07,
+        0.9999999999999929,
+        0.0,
+        0.0,
+        0.8898558616638184,
+        1.5280184745788574,
+        1.0
+      ],
+      "name": "Box001"
+    },
+    {
+      "children": [
+        12
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.123233995736766e-17,
+        -1.0,
+        0.0,
+        -0.0,
+        1.0,
+        6.123233995736766e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Object_11"
+    },
+    {
+      "mesh": 2,
+      "name": "Box001_Material #124_0"
+    },
+    {
+      "children": [
+        14
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999929,
+        1.1920928955078042e-07,
+        0.0,
+        0.0,
+        -1.1920928955078042e-07,
+        0.9999999999999929,
+        0.0,
+        -2.6181423664093018,
+        0.8802237510681152,
+        2.362031936645508,
+        1.0
+      ],
+      "name": "SaloonTableHP"
+    },
+    {
+      "children": [
+        15
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.123233995736766e-17,
+        -1.0,
+        0.0,
+        -0.0,
+        1.0,
+        6.123233995736766e-17,
+        0.0,
+        0.0,
+        0.5240398049354553,
+        0.0,
+        1.0
+      ],
+      "name": "Object_14"
+    },
+    {
+      "mesh": 3,
+      "name": "SaloonTableHP_Material #124_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
