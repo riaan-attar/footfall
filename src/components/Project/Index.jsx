@@ -198,7 +198,7 @@ function Project() {
                 w-full h-[120vw]
                 md:w-[20vw] md:h-[25vw] relative overflow-hidden `}
               > 
-                <img src='https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800' alt="image1"
+                <img src='https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800' alt="image1" loading="lazy"
                   className="inline-block md:hidden w-full h-full object-cover"  
                 />
                 {/* <img src="https://obys.agency/wp-content/uploads/2023/08/Olga_Prudka_2.png" 
@@ -225,7 +225,7 @@ function Project() {
               className={`imageContainer ${styles.imageContainer} md:ml-0 w-full h-[100vw]
               md:w-[36vw] md:h-[40vw] relative overflow-hidden `}
             > 
-              <img src='https://images.unsplash.com/photo-1481481600674-e9314d4ce14f?auto=format&fit=crop&w=800' alt="image1"
+              <img src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800' alt="aim project" loading="lazy"
                 className="inline-block md:hidden w-full h-full object-cover"  
               />
                 {/* <img src="https://obys.agency/wp-content/uploads/2023/08/Olga_Prudka_2.png" 
@@ -292,7 +292,7 @@ function Project() {
               w-full h-[100vw]
               md:w-[36vw] md:h-[40vw] relative overflow-hidden `}
             > 
-              <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800" alt="image1"
+              <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800" alt="ochi project" loading="lazy"
                  className="inline-block md:hidden w-full h-full object-cover"  
               />
               {/* <img src="https://obys.agency/wp-content/uploads/2022/06/OCHI_2-1.png" 
@@ -322,7 +322,7 @@ function Project() {
                 className={`imageContainer ${styles.imageContainer} md:ml-0 w-full h-[100vw]
                 md:w-[30vw] md:h-[38vw] relative overflow-hidden `}
               > 
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" alt="image1"
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" alt="laxer project" loading="lazy"
                   className="inline-block md:hidden w-full h-full object-cover"  
                 />
                 {/* <img src="https://obys.agency/wp-content/uploads/2023/08/Laxer_2.png" 
@@ -354,7 +354,7 @@ function Project() {
               className={`imageContainer ${styles.imageContainer} md:ml-0 w-full h-[120vw]
               md:w-[20vw] md:h-[25vw] relative overflow-hidden `}
             > 
-              <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800" alt="image1"
+              <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800" alt="eminente project" loading="lazy"
                  className="inline-block md:hidden w-full h-full object-cover"  
               />
               {/* <img src="https://obys.agency/wp-content/uploads/2023/11/%C3%89minente-_img1-x2.png" 
@@ -399,7 +399,7 @@ function Project() {
                 className={`imageContainer ${styles.imageContainer} md:ml-0 realtive w-full h-[100vw]
                 md:w-[30vw] md:h-[38vw] relative overflow-hidden `}
               > 
-                <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800" alt="image1"
+                <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800" alt="makhno project" loading="lazy"
                   className="inline-block md:hidden w-full h-full object-cover"  
                 />
                 {/* <img src="https://obys.agency/wp-content/uploads/2023/12/Makhno_Hover.png" 

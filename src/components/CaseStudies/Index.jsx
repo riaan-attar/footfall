@@ -116,6 +116,7 @@ export default function CaseStudies() {
               <img
                 src={study.image}
                 alt={study.title}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               {/* Overlay */}

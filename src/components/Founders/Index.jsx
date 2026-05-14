@@ -64,6 +64,7 @@ export default function Founders() {
                <img 
                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" 
                  alt="Founders Group" 
+                 loading="lazy"
                  className="w-full h-full object-cover"
                />
              </div>
