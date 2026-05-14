@@ -9,6 +9,7 @@ import About from './components/About/Index';
 import Marqueue from './components/Marqueue/Index';
 import Footer from './components/Footer/Index';
 import Founders from './components/Founders/Index';
+import FAQ from './components/FAQ/Index';
 import Navbar from './components/Navbar/Index';
 import Project from './components/Project/Index';
 
@@ -52,6 +53,7 @@ function App() {
           <Marqueue/>
           <Testimonials/>
           <Founders/>
+          <FAQ/>
           <Footer/>
           <CaseStudies/>
         </div>

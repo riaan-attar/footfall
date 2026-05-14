@@ -88,7 +88,7 @@ export default function CaseStudies() {
         <div className="left">
           <div className="md:pl-[14vw]">
             <div className="font-[silkSerif] text-[8vw] mb-0 md:mb-0 md:text-[2.6vw] md:leading-[4vw]">
-              <h2>08</h2>
+              <h2>09</h2>
             </div>
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function CaseStudies() {
       <div className="w-full bg-white border-t border-zinc-100 px-[6vw] md:px-[4vw] pt-[6vw] pb-0 md:pt-[2vw] md:pb-0">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <h5 className="text-[3vw] md:text-[.8vw] text-zinc-400 font-semibold tracking-widest uppercase">
-            Footfall Marketing &copy; 2024
+            Footfall Metrics &copy; 2024
           </h5>
           <h5 className="text-[3vw] md:text-[.8vw] text-zinc-400 font-semibold tracking-widest uppercase flex items-center gap-2">
             Developed by

@@ -47,7 +47,7 @@ function Footer() {
                     <div className="font-[silkSerif] text-[8vw] mb-0 md:mb-0
                         md:text-[2.6vw] md:leading-[4vw]"
                     >
-                        <h2>07</h2>
+                        <h2>08</h2>
                     </div>             
                 </div>
             </div>
@@ -135,7 +135,7 @@ function Footer() {
                         <div className="contact-section space-y-[2vw] md:space-y-[1vw]">
                             <h3 className="text-zinc-500 text-[3.5vw] md:text-[.9vw] uppercase tracking-widest font-semibold mb-[4vw] md:mb-[2vw]">Say Hi!</h3>
                             <h2 className="text-[5.8vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw] underline decoration-1 underline-offset-[6px] hover:text-[#F63D18] transition-colors cursor-pointer">
-                                info@footfallmarketing.com
+                                info@footfallmetrics.com
                             </h2>
                         </div>
                     </div>

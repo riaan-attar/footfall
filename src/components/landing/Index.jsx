@@ -23,22 +23,20 @@ function Landing() {
       <div
         className="w-full relative min-h-screen overflow-hidden"
       >
-        {/* D3 Globe - right side (desktop only) */}
-        {!isMobile && (
-          <div
-            className="hidden sm:flex absolute z-0 items-center justify-center"
-            style={{
-              top: 0,
-              right: 0,
-              width: '44vw',
-              height: '100%',
-              pointerEvents: 'auto',
-              paddingBottom: '8%',
-            }}
-          >
-            <GlobeViewer size={400} />
-          </div>
-        )}
+        {/* D3 Globe - right side (desktop) / Background (mobile) */}
+        <div
+          className="flex absolute z-0 items-center justify-center pointer-events-none sm:pointer-events-auto"
+          style={{
+            top: isMobile ? '10%' : 0,
+            right: 0,
+            width: isMobile ? '100vw' : '44vw',
+            height: '100%',
+            paddingBottom: isMobile ? '0' : '8%',
+            opacity: isMobile ? 0.3 : 1, // Make it a subtle background on mobile
+          }}
+        >
+          <GlobeViewer size={isMobile ? window.innerWidth * 1.2 : 400} />
+        </div>
 
         <div
           className="relative px-[6vw] pt-[25vw] pb-[6vw]
