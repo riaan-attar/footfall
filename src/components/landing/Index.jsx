@@ -1,5 +1,5 @@
 import styles from './Style.module.css'
-import CubeViewer from '../CubeViewer/Index'
+import GlobeViewer from '../GlobeViewer/Index'
 import { useState, useEffect } from 'react'
 
 function Landing() {
@@ -21,21 +21,22 @@ function Landing() {
     <div className=" page1  w-full">
       {/* Landing Page */}
       <div
-        className="w-full relative min-h-screen"
+        className="w-full relative min-h-screen overflow-hidden"
       >
-        {/* 3D Model Viewer - top right corner (desktop only) */}
+        {/* D3 Globe - right side (desktop only) */}
         {!isMobile && (
           <div
-            className="hidden sm:block absolute z-0"
+            className="hidden sm:flex absolute z-0 items-center justify-center"
             style={{
               top: 0,
-              right: '2vw',
-              width: '40vw',
+              right: 0,
+              width: '44vw',
               height: '100%',
               pointerEvents: 'auto',
+              paddingBottom: '8%',
             }}
           >
-            <CubeViewer width="100%" height="100%" />
+            <GlobeViewer size={400} />
           </div>
         )}
 
