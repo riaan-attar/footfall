@@ -42,18 +42,16 @@ function Landing() {
             md:text-[6vw] uppercase font-[PlinaReg] md:leading-[6.5vw] md:tracking-normal pointer-events-auto"
           >
             <div className={`hero ${styles.hero}`} id="hero1">
-              <h1>We Design</h1>
+              <h1>We Don&apos;t</h1>
             </div>
             <div className={`hero ${styles.hero}`} id="hero2">
-              <h1>Unique</h1>
+              <h1>Chase Clicks.</h1>
             </div>
             <div className={`hero ${styles.hero} relative z-[999] `} id="hero3">
-              <h2 className="mr-[2vw] md:mr-0">Web</h2>
-              <h3 className="hidden md:inline-block">/</h3>
-              <h2 className="md:ml-0">Graphic</h2>
+              <h2 className="mr-[2vw] md:mr-0">We Drive</h2>
             </div>
             <div className={`hero ${styles.hero}`} id="hero4">
-              <h1>Experience</h1>
+              <h1>Footfall.</h1>
             </div>
 
             {/* CTA Buttons */}
@@ -63,14 +61,14 @@ function Landing() {
                 onClick={handleContactScroll}
                 className={styles.ctaBtnPrimary}
               >
-                <span>Contact Us</span>
+                <span>Get a quote</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </button>
               <a
                 id="hero-call-btn"
-                href="tel:+919999999999"
+                href="tel:+919082725905"
                 className={styles.ctaBtnOutline}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

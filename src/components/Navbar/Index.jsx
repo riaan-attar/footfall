@@ -99,7 +99,7 @@ function Navbar() {
         {/* Mobile: logo right + hamburger implied by dots on left */}
         <div className="mobileContact md:hidden">
           <a
-            href="tel:+919999999999"
+            href="tel:+919082725905"
             className={styles.mobileCallBtn}
           >
             Call Now

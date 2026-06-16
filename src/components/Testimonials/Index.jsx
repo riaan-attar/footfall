@@ -47,21 +47,21 @@ function Testimonials() {
             items={[
               { 
                 avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop', 
-                text: '"The lovely team at DesignMe has provided our startup with significant leverage. Their work is exceptionally professional, and Adrian is always attentive to our needs, taking the time to understand our briefs and offer valuable direction. Additionally, their turnaround times are impressively fast!"',
-                name: 'Patrick Nawrocki',
-                title: 'UX Manager at Superhabits'
+                text: '"The team\'s understanding of Google Ads and local search marketing is exceptional. They consistently delivered measurable results and helped us achieve a strong return on our advertising spend. Highly recommended for any business looking to increase walk-in customers."',
+                name: 'Harshal Patil',
+                title: 'Owner - BBQ Earth'
               },
               { 
                 avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop', 
-                text: '"Their attention to detail and animations are second to none. The new design system completely elevated our brand presence and converted more users than we ever thought possible. A true masterpiece of digital engineering!"',
-                name: 'Sarah Jenkins',
-                title: 'Product Lead at FinTech'
+                text: '"Footfall Metrics completely changed the way we look at marketing. Instead of focusing on vanity metrics, they helped us bring actual customers through our doors. The increase in footfall and revenue was visible within the first few months."',
+                name: 'Mounil Majethia',
+                title: 'Co-Founder - Krave'
               },
               { 
                 avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop', 
-                text: '"The creative direction and development speed was phenomenal. I cannot recommend them enough for anyone looking to build a high-end, premium digital experience. Exceeded expectations in every single way!"',
-                name: 'Michael Chen',
-                title: 'CEO at Elevate Inc.'
+                text: '"What sets Footfall Metrics apart is their focus on business outcomes. Their campaigns not only improved our visibility online but also translated into real customer visits and higher sales. They have been a valuable growth partner for our brand."',
+                name: 'Shasank',
+                title: 'Owner - 46 Ounces Brewgarden'
               }
             ]}
             bend={1} 

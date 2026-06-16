@@ -30,7 +30,7 @@ export function revealOnScroll(targets, options = {}) {
 }
 
 const About = () => {
-  const description = "We are a data-driven marketing collective dedicated to building performance engines that empower e-commerce and local businesses to dominate their markets. With deep expertise in Google Ads, Meta Ads, and full-funnel CRO, we craft scalable strategies that turn clicks into measurable revenue.";
+  const description = "At Footfall Metrics, we help businesses turn online searches into real customer visits. Using Google Ads, Meta Ads, and Local Search Advertising, we focus on one metric that truly matters—actual footfall. Unlike traditional marketing agencies that focus on clicks and impressions, we specialize in driving verified walk-ins to physical locations. Our strategies are designed to connect businesses with nearby customers who are actively looking for their products or services. Simply put, we help businesses get found, get visited, and grow.";
   
   const mainImage = {
     src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80",
@@ -60,8 +60,8 @@ const About = () => {
   const achievementsTitle = "Our Impact in Numbers";
   const achievementsDescription = "We don't just run ads; we build revenue engines. Here is the tangible impact we've delivered for our partners.";
   const achievements = [
-    { label: "Ad Spend Managed", prefix: "$", value: 5, suffix: "M+", isFloat: false },
-    { label: "Avg. ROAS Increase", prefix: "", value: 3.2, suffix: "x", isFloat: true },
+    { label: "Ad Spend Managed", prefix: "$", value: 1, suffix: "M+", isFloat: false },
+    { label: "Avg. ROAS Increase", prefix: "", value: 10, suffix: "x", isFloat: false },
     { label: "Active Clients", prefix: "", value: 40, suffix: "+", isFloat: false },
     { label: "Years of Experience", prefix: "", value: 8, suffix: "+", isFloat: false },
   ];
@@ -159,7 +159,7 @@ const About = () => {
         <div className="right w-full">
           <div className="aboutHeading overflow-hidden pb-[3vw] md:pb-0">
             <h1 className="text-[12vw] leading-[12vw] tracking-tighter md:text-[6vw] font-[PlinaReg] md:leading-[6vw] md:tracking-normal uppercase cursor-default">
-              About Footfall Marketing
+              About Footfall Metrics
             </h1>
           </div>
           <UnderLine marginBottom='0vw' marginTop='1vw' />

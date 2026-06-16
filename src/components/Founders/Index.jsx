@@ -95,7 +95,7 @@ export default function Founders() {
              </div>
 
              <div className="founder-text mt-8 flex flex-wrap gap-2">
-                 {['Creative Strategy', 'AI & ML', 'Data Analytics', 'Design Systems', 'WebGL', 'Full-Stack Eng'].map(tag => (
+                 {['Revenue-Focused Growth', 'Footfall Growth Strategy', 'Google Advertising', 'Meta Advertising', 'Local Discovery Marketing', 'Creative Strategy', 'AI & ML', 'Data Analytics'].map(tag => (
                    <span key={tag} className="bg-gray-100 text-black px-4 py-2 text-[11px] uppercase tracking-wider font-bold rounded-full border border-gray-200">
                      {tag}
                    </span>

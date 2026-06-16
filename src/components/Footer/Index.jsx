@@ -8,12 +8,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const data = [
-    { title: "Dribbble"},
-    {title: "Behance"},
     {title: "Instagram"},
     {title: "Facebook"},
-    {title: "Twitter"},
-    {title: "YouTube"},
 ]
 
 function Footer() {
@@ -59,7 +55,7 @@ function Footer() {
                             md:text-[6.8vw] md:leading-[7vw] md:tracking-normal
                             uppercase title-hover-outline cursor-default`}
                         >
-                            let&apos;s create
+                            let&apos;s build
                         </h1>
                         <div className="ml-[4vw] w-[8vw] md:ml-[3vw] md:w-[6vw]">
                             <svg className="entry-title__arrow" viewBox="0 0 118 91" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,14 +124,14 @@ function Footer() {
                         </div>
                         <div className="contact-section space-y-[2vw] md:space-y-[1vw]">
                             <h3 className="text-zinc-500 text-[3.5vw] md:text-[.9vw] uppercase tracking-widest font-semibold mb-[4vw] md:mb-[2vw]">Address</h3>
-                            <h2 className="text-[5.4vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw]">Skovorody 5</h2>
-                            <h2 className="text-[5.4vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw]">61057 Kharkiv</h2>
-                            <h2 className="text-[5.4vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw]">Ukraine</h2>
+                            <h2 className="text-[5.4vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw]">B-37, NICE Industrial Area</h2>
+                            <h2 className="text-[5.4vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw]">MIDC, Nashik</h2>
+                            <h2 className="text-[5.4vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw]">422007</h2>
                         </div>
                         <div className="contact-section space-y-[2vw] md:space-y-[1vw]">
                             <h3 className="text-zinc-500 text-[3.5vw] md:text-[.9vw] uppercase tracking-widest font-semibold mb-[4vw] md:mb-[2vw]">Say Hi!</h3>
                             <h2 className="text-[5.8vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw] underline decoration-1 underline-offset-[6px] hover:text-[#F63D18] transition-colors cursor-pointer">
-                                info@footfallmetrics.com
+                                hello@footfallmetics.in
                             </h2>
                         </div>
                     </div>
@@ -145,7 +141,7 @@ function Footer() {
         {/* <div className="w-full bg-white border-t border-zinc-100 px-[6vw] md:px-[4vw] py-[6vw] md:py-[2vw]">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <h5 className="text-[3vw] md:text-[.8vw] text-zinc-400 font-semibold tracking-widest uppercase">
-                    Footfall Marketing &copy; 2024
+                    Footfall Metrics &copy; 2024
                 </h5>
                 <h5 className="text-[3vw] md:text-[.8vw] text-zinc-400 font-semibold tracking-widest uppercase flex items-center gap-2">
                     Developed by 

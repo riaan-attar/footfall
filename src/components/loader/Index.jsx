@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 function Loader() {
 
     useEffect(() => {
+        document.body.style.overflow = 'hidden';
         var h5timer = document.querySelector('.part1 h5');
         var grow = 0;
         setInterval(function() {
@@ -47,7 +48,11 @@ function Loader() {
         })
         
         tl.to('.loader', {
-            display: 'none'
+            display: 'none',
+            onComplete: () => {
+                document.body.style.overflow = '';
+                window.scrollTo(0, 0);
+            }
         })
         tl.from('.header', {
             opacity:0

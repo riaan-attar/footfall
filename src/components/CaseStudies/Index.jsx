@@ -8,58 +8,58 @@ gsap.registerPlugin(ScrollTrigger);
 const cases = [
   {
     tag: 'Brand Strategy',
-    title: 'Empowering a D2C fashion brand to 4× its monthly revenue',
+    title: 'MIYA KEBABS',
     excerpt:
-      'A mid-sized athleisure label was struggling with inconsistent brand voice and poor ad performance. We rebuilt their identity from the ground up — from positioning to paid social creative — and turned it into a conversion machine.',
+      "Miya Kebabs represents one of Footfall Metrics' most successful long-term growth stories. We partnered with the brand during its early stages when it operated a single outlet in Mumbai. Over the next three years, we worked closely with the founders to build brand awareness and drive customer acquisition through a combination of Google Ads, Meta Ads, influencer collaborations, and continuous performance marketing optimization. Our campaigns focused on increasing local visibility, strengthening brand recall, and generating consistent footfall across locations. As the brand grew, so did its presence. From a single outlet, Miya Kebabs expanded to five outlets across Mumbai and Pune, supported by sustained marketing efforts and a strong digital presence. Today, the brand continues to achieve exceptional results, with Google Ads consistently delivering over 20x ROAS month after month. Miya Kebabs stands as a testament to how data-driven performance marketing can help transform a local restaurant into a recognized regional brand.",
     image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80',
     color: '#1a1a2e',
     textLight: true,
     stats: [
       { value: '400%', label: 'Revenue Growth' },
-      { value: '3.2x', label: 'ROAS Increase' },
-      { value: '-25%', label: 'CPA Reduction' },
+      { value: 'More than 20x', label: 'increase in ROAS' },
+      { value: '1 to 6 Outlets', label: 'in 3 years' },
     ]
   },
   {
-    tag: 'Product Design',
-    title: 'Streamlining remote hiring with a marketplace platform',
+    tag: 'Legacy Continued',
+    title: 'Kake Da Hotel',
     excerpt:
-      'Struggling to find the perfect software development partner? Our client cuts through the noise. The platform connects businesses with elite development firms, ensuring a perfect match for your project.',
+      "Kake Da Hotel is one of India's most iconic restaurant brands, with a legacy spanning over 90 years and its flagship outlet located in Connaught Place, Delhi. Footfall Metrics manages performance marketing for four of their Mumbai outlets. Our strategy combined Google Ads, Meta Ads, and influencer collaborations to drive awareness and increase footfall. Through carefully planned influencer campaigns, we promoted corporate lunch offerings and kitty party bookings while simultaneously running high-intent Google Ads campaigns to capture customers actively searching for dining options. The result was a significant increase in customer visits and bookings, delivering an impressive 8x return on ad spend (ROAS) across campaigns.",
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
     color: '#F63D18',
     textLight: true,
     stats: [
-      { value: '10k+', label: 'Active Users' },
-      { value: '60%', label: 'Faster Hiring' },
-      { value: '98%', label: 'Match Rate' },
+      { value: '8x ROAS', label: 'Achieved' },
+      { value: '50%', label: 'Increase in Kitty & Corporate Bookings' },
+      { value: '20%', label: 'Revenue Growth' },
     ]
   },
   {
-    tag: 'Web Experience',
-    title: 'Building a premium digital presence for a luxury real estate firm',
+    tag: 'Maximum Control',
+    title: 'Bharathiya',
     excerpt:
-      'The client needed a website that matched the exclusivity of their properties. We delivered an immersive, animation-first experience that positioned them as the definitive luxury brand in their market.',
+      "Located in Hyderabad's Financial District, Bharathiya is a popular restaurant known for its authentic cuisine and strong local presence. When Footfall Metrics partnered with Bharathiya, the restaurant was primarily running Google Smart Campaigns, which offered limited control over targeting and optimization. We transitioned the account to fully manual Google Ads campaigns, allowing us to build dedicated strategies for different dayparts and customer intents. Separate campaigns were created for breakfast, lunch, thalis, snacks, and dinner, ensuring that the right message reached the right audience at the right time. Alongside Google Ads, we leveraged Meta Ads to generate bulk catering enquiries for corporate and social events. This structured approach resulted in a remarkable 9x ROAS while also creating an additional revenue stream through catering orders.",
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6d5fab2c?auto=format&fit=crop&w=800&q=80',
     color: '#f0ede6',
     textLight: false,
     stats: [
-      { value: '2.5x', label: 'Lead Quality' },
-      { value: '+120%', label: 'Time on Site' },
-      { value: '45%', label: 'Conversion Rate' },
+      { value: '100%', label: 'control over Ads' },
+      { value: '40%', label: 'high intent leads' },
+      { value: '20%', label: 'increase in Catering orders' },
     ]
   },
   {
-    tag: 'Growth Marketing',
-    title: 'Scaling a SaaS startup from 0 to 12,000 users in 90 days',
+    tag: 'Maximized Walk-ins',
+    title: '46 Ounces',
     excerpt:
-      'A seed-stage SaaS tool had a strong product but zero traction. We architected a full-funnel growth strategy — content, SEO, referral loops, and targeted paid acquisition — that delivered compound growth from day one.',
+      "46 Ounces Brewgarden and 46 Ounces Brewhouse are among Bangalore's most recognized brewery brands, with their flagship presence in the bustling Electronic City area. Our focus was centered on Google Ads, where we deployed aggressive search campaigns to capture customers actively looking for breweries, pubs, and dining destinations. We also strategically targeted competitor search terms to increase visibility among high-intent audiences considering alternative venues. With a strong advertising budget and continuous optimization, the campaigns delivered exceptional performance, generating approximately 13x ROAS while driving substantial footfall and revenue growth for the brand.",
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
     color: '#0f172a',
     textLight: true,
     stats: [
-      { value: '12k', label: 'New Users' },
-      { value: '90', label: 'Days to Scale' },
-      { value: '3x', label: 'Organic Traffic' },
+      { value: '13x', label: 'ROAS' },
+      { value: '15%', label: 'Revenue Growth' },
+      { value: '120%', label: 'increase in New Customers' },
     ]
   },
 ];

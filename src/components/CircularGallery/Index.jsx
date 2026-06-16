@@ -325,9 +325,9 @@ class App {
     const defaultItems = [
       {
         avatar: 'https://randomuser.me/api/portraits/men/11.jpg',
-        text: '"The lovely team at DesignMe has provided our startup with significant leverage. Their work is exceptionally professional..."',
-        name: 'Patrick Nawrocki',
-        title: 'UX Manager at Superhabits'
+        text: '"The team\'s understanding of Google Ads and local search marketing is exceptional. They consistently delivered measurable results and helped us achieve a strong return on our advertising spend. Highly recommended for any business looking to increase walk-in customers."',
+        name: 'Harshal Patil',
+        title: 'Owner - BBQ Earth'
       }
     ];
     
