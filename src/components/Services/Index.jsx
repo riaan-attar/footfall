@@ -20,11 +20,6 @@ const Services = () => {
         opacity: 1, y: 0, duration: 0.75, ease: 'power3.out', stagger: 0.12,
         scrollTrigger: { trigger: '.service-card', start: 'top 88%', toggleActions: 'play none none reset' }
       });
-      // Industries stagger reveal
-      gsap.fromTo('.industry-item', { opacity: 0, x: -20 }, {
-        opacity: 1, x: 0, duration: 0.5, stagger: 0.1, ease: 'power2.out',
-        scrollTrigger: { trigger: '.industries-section', start: 'top 85%', toggleActions: 'play none none reset' }
-      });
     }, sectionRef);
     return () => ctx.revert();
   }, []);
@@ -55,16 +50,6 @@ const Services = () => {
       ],
       color: "#1a1a2e"
     }
-  ];
-
-  const industries = [
-    "Restaurants",
-    "Cafes",
-    "Pubs & Bars",
-    "Hotels & Resorts",
-    "Real Estate Builders",
-    "Hospitality Brands",
-    "Spa's"
   ];
 
   return (
@@ -144,23 +129,6 @@ const Services = () => {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Industries We Work With Section */}
-      <div className="industries-section w-full mt-[4vw] md:mt-[3vw] mb-[4vw] pt-0">
-        <h2 className="services-heading font-[PlinaReg] text-[7vw] md:text-[3vw] uppercase tracking-tight mb-[4vw] md:mb-[2.5vw] text-black border-b border-zinc-200 pb-4">
-          Industries We Work With
-        </h2>
-        <div className="flex flex-nowrap overflow-x-auto scrollbar-hide gap-[3vw] md:gap-[2vw] pb-3 -mx-[6vw] px-[6vw] md:-mx-[4vw] md:px-[4vw]">
-          {industries.map((industry, index) => (
-            <div 
-              key={index}
-              className="industry-item flex-shrink-0 whitespace-nowrap px-[5vw] py-[2.5vw] md:px-[2.5vw] md:py-[1.2vw] bg-zinc-100 rounded-full text-zinc-800 font-medium text-[4vw] md:text-[1.1vw] border border-zinc-200 hover:bg-[#F63D18] hover:text-white hover:border-[#F63D18] transition-all duration-300 cursor-default"
-            >
-              {industry}
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

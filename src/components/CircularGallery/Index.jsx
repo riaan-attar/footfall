@@ -283,6 +283,7 @@ class App {
     this.scrollSpeed = scrollSpeed;
     this.scroll = { ease: scrollEase, current: 0, target: 0, last: 0 };
     this.onCheckDebounce = debounce(this.onCheck, 200);
+    this.isPaused = false;
     this.createRenderer();
     this.createCamera();
     this.createScene();
@@ -401,6 +402,7 @@ class App {
   }
   
   update() {
+    if (this.isPaused) return;
     this.scroll.current = lerp(this.scroll.current, this.scroll.target, this.scroll.ease);
     const direction = this.scroll.current > this.scroll.last ? 'right' : 'left';
     if (this.medias) {
@@ -409,6 +411,23 @@ class App {
     this.renderer.render({ scene: this.scene, camera: this.camera });
     this.scroll.last = this.scroll.current;
     this.raf = window.requestAnimationFrame(this.update.bind(this));
+  }
+
+  pause() {
+    this.isPaused = true;
+    if (this.raf) {
+      window.cancelAnimationFrame(this.raf);
+      this.raf = null;
+    }
+  }
+
+  play() {
+    if (this.isPaused) {
+      this.isPaused = false;
+      if (!this.raf) {
+        this.raf = window.requestAnimationFrame(this.update.bind(this));
+      }
+    }
   }
   
   addEventListeners() {
@@ -455,7 +474,21 @@ export default function CircularGallery({
   const containerRef = useRef(null);
   useEffect(() => {
     const app = new App(containerRef.current, { items, bend, borderRadius, scrollSpeed, scrollEase });
+    
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        app.play();
+      } else {
+        app.pause();
+      }
+    }, { threshold: 0.01 });
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
     return () => {
+      observer.disconnect();
       app.destroy();
     };
   }, [items, bend, borderRadius, scrollSpeed, scrollEase]);

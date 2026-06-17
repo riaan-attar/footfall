@@ -55,27 +55,47 @@ function Marqueue() {
                 ${styles.elem}`}
               >
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
-                  Sport 
+                  Restaurants 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black `}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
-                  Fashion 
+                  Cafes 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
-                  technology 
+                  Pubs & Bars 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
-                  Fashion 
+                  Hotels & Resorts 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
-                  technology 
+                  Real Estate Builders 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
-                  sport 
+                  Hospitality Brands 
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
+                  Spa&apos;s 
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
+                  Restaurants 
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black `}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
+                  Cafes 
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
+                  Pubs & Bars 
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
+                  Hotels & Resorts 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
               </div>
@@ -87,27 +107,47 @@ function Marqueue() {
                 ${styles.elem2}`}
               >
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
-                  beauty
+                  Spa&apos;s
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
-                  real estate
+                  Hospitality Brands
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
-                  architecture 
+                  Real Estate Builders 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
-                  beauty 
+                  Hotels & Resorts 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
-                  real estate 
+                  Pubs & Bars 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
-                  architecture 
+                  Cafes 
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
+                  Restaurants 
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
+                  Spa&apos;s
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
+                  Hospitality Brands
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
+                  Real Estate Builders 
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
+                  Hotels & Resorts 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
               </div>
@@ -118,27 +158,43 @@ function Marqueue() {
                 ${styles.elem}`}
               >
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
-                  partners
+                  Hotels & Resorts
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
-                  travel
+                  Real Estate Builders
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
-                  science 
+                  Hospitality Brands 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
-                  partners 
+                  Spa&apos;s 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
-                  travel 
+                  Restaurants 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
-                  science 
+                  Cafes 
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
+                  Pubs & Bars 
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
+                  Hotels & Resorts
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
+                  Real Estate Builders
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
+                  Hospitality Brands 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
               </div>
@@ -150,27 +206,47 @@ function Marqueue() {
                 ${styles.elem2}`}
               >
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
-                  hotels
+                  Pubs & Bars
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
-                  music
+                  Cafes
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
-                  automotive
+                  Restaurants
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
-                  hotels 
+                  Spa&apos;s 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
-                  music 
+                  Hospitality Brands 
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
                 <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
-                  automotive
+                  Real Estate Builders
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
+                  Hotels & Resorts
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
+                  Pubs & Bars
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
+                  Cafes
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw]`}>
+                  Restaurants
+                  <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
+                </h1>
+                <h1 className={`${styles.elemh1} flex items-center gap-[3vw] font-[silkSerif] `}>
+                  Spa&apos;s
                   <div className={`${styles.dash} w-[8vw] h-[1vw] md:w-[5vw] md:h-[.5vw] border-[1px] border-black`}></div>
                 </h1>
               </div>
