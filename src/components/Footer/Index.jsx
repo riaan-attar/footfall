@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import AnimatedLink from '../AnimatedLink'
 import UnderLine from '../Underline/Index'
 import styles from './Style.module.css'
@@ -14,6 +14,33 @@ const data = [
 
 function Footer() {
     const footerRef = useRef(null);
+    const [result, setResult] = useState("");
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target);
+        formData.append("access_key", "0535b9ee-7565-4b8c-8eaf-6b19c7f2367d");
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                setResult("Form Submitted Successfully!");
+                event.target.reset();
+                setTimeout(() => setResult(""), 5000);
+            } else {
+                setResult("Error: " + data.message);
+            }
+        } catch (error) {
+            console.error("Submit error:", error);
+            setResult("Network error. Please try again.");
+        }
+    };
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -71,11 +98,13 @@ function Footer() {
 
                         {/* Left Column: Onboarding Form */}
                         <div className="footer-form-col form-col w-full md:w-[55%] mb-[16vw] md:mb-0">
-                            <form className="flex flex-col gap-[8vw] md:gap-[3vw]" onSubmit={(e) => e.preventDefault()}>
+                            <form className="flex flex-col gap-[8vw] md:gap-[3vw]" onSubmit={onSubmit}>
                                 <div className="form-field flex flex-col gap-[2vw] md:gap-[1vw]">
                                     <label className="text-zinc-500 text-[3.5vw] md:text-[.9vw] uppercase tracking-widest font-semibold">Name / Company</label>
                                     <input
                                         type="text"
+                                        name="name"
+                                        required
                                         placeholder="John Doe @ Brand"
                                         className="w-full bg-transparent border-b border-zinc-300 py-2 md:py-3 text-[5vw] md:text-[1.8vw] focus:outline-none focus:border-[#F63D18] transition-colors placeholder:text-zinc-300"
                                     />
@@ -84,6 +113,8 @@ function Footer() {
                                     <label className="text-zinc-500 text-[3.5vw] md:text-[.9vw] uppercase tracking-widest font-semibold">Email Address</label>
                                     <input
                                         type="email"
+                                        name="email"
+                                        required
                                         placeholder="hello@example.com"
                                         className="w-full bg-transparent border-b border-zinc-300 py-2 md:py-3 text-[5vw] md:text-[1.8vw] focus:outline-none focus:border-[#F63D18] transition-colors placeholder:text-zinc-300"
                                     />
@@ -92,17 +123,24 @@ function Footer() {
                                     <label className="text-zinc-500 text-[3.5vw] md:text-[.9vw] uppercase tracking-widest font-semibold">Project Details</label>
                                     <textarea
                                         rows="3"
+                                        name="message"
+                                        required
                                         placeholder="Tell us about your vision..."
                                         className="w-full bg-transparent border-b border-zinc-300 py-2 md:py-3 text-[5vw] md:text-[1.8vw] focus:outline-none focus:border-[#F63D18] transition-colors resize-none placeholder:text-zinc-300"
                                     ></textarea>
                                 </div>
-                                <div className="form-field mt-[4vw] md:mt-[1vw]">
+                                <div className="form-field mt-[4vw] md:mt-[1vw] flex flex-col md:flex-row items-start md:items-center gap-4">
                                     <button
                                         type="submit"
                                         className="group relative overflow-hidden bg-black text-white px-[8vw] py-[4vw] md:px-[3vw] md:py-[1.2vw] rounded-full text-[4vw] md:text-[1.1vw] uppercase tracking-widest hover:bg-[#F63D18] transition-colors duration-300"
                                     >
                                         <span className="relative z-10 font-semibold">Send Request</span>
                                     </button>
+                                    {result && (
+                                        <span className="font-[PlinaReg] text-[4vw] md:text-[1vw] text-zinc-500 uppercase tracking-wider animate-pulse">
+                                            {result}
+                                        </span>
+                                    )}
                                 </div>
                             </form>
                         </div>
@@ -130,9 +168,18 @@ function Footer() {
                             </div>
                             <div className="contact-section space-y-[2vw] md:space-y-[1vw]">
                                 <h3 className="text-zinc-500 text-[3.5vw] md:text-[.9vw] uppercase tracking-widest font-semibold mb-[4vw] md:mb-[2vw]">Say Hi!</h3>
-                                <h2 className="text-[5.8vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw] underline decoration-1 underline-offset-[6px] hover:text-[#F63D18] transition-colors cursor-pointer">
-                                    hello@footfallmetics.in
-                                </h2>
+                                <a
+                                    href="mailto:hello@footfallmetics.in"
+                                    className="text-[5.8vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw] underline decoration-1 underline-offset-[6px] hover:text-[#F63D18] transition-colors cursor-pointer block"
+                                >
+                                    niranjan@footfallmetics.in
+                                </a>
+                                <a
+                                    href="tel:+919082725905"
+                                    className="text-[5.8vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw] underline decoration-1 underline-offset-[6px] hover:text-[#F63D18] transition-colors cursor-pointer block pt-[2vw] md:pt-[0.8vw]"
+                                >
+                                    +91 90827 25905
+                                </a>
                             </div>
                         </div>
                     </div>
