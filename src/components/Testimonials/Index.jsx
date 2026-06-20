@@ -46,19 +46,19 @@ function Testimonials() {
         <CircularGallery
           items={[
             {
-              avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
+              avatar: '/images/harshal.png',
               text: '"The team\'s understanding of Google Ads and local search marketing is exceptional. They consistently delivered measurable results and helped us achieve a strong return on our advertising spend. Highly recommended for any business looking to increase walk-in customers."',
               name: 'Harshal Patil',
               title: 'BBQ Earth'
             },
             {
-              avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop',
+              avatar: '/images/mounil.png',
               text: '"Footfall Metrics completely changed the way we look at marketing. Instead of focusing on vanity metrics, they helped us bring actual customers through our doors. The increase in footfall and revenue was visible within the first few months."',
               name: 'Mounil Majethia',
               title: 'Krave'
             },
             {
-              avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop',
+              avatar: '/images/shasank.png',
               text: '"What sets Footfall Metrics apart is their focus on business outcomes. Their campaigns not only improved our visibility online but also translated into real customer visits and higher sales. They have been a valuable growth partner for our brand."',
               name: 'Shasank',
               title: '46 Ounces Brewgarden'
