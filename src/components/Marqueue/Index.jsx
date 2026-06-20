@@ -31,7 +31,7 @@ function Marqueue() {
             <div className="left">
                 <div className="md:pl-[14vw]">
                     <div className="font-[silkSerif] text-[8vw] mb-0 md:mb-0 md:text-[2.6vw] md:leading-[4vw]">
-                        <h2>04</h2>
+                        <h2>05</h2>
                     </div>
                 </div>
             </div>

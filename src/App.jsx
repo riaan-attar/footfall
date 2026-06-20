@@ -51,13 +51,13 @@ function App() {
           <Impact />
           <Services />
           <Project/>
+          <CaseStudies/>
           <About/>
           <Marqueue/>
           <Testimonials/>
           <Founders/>
           <FAQ/>
           <Footer/>
-          <CaseStudies/>
         </div>
       </div>
 

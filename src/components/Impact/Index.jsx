@@ -8,8 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 const Impact = () => {
   const achievementsTitle = "Our Impact in Numbers";
   const achievementsDescription = "We don't just run ads; we build revenue engines. Here is the tangible impact we've delivered for our partners.";
+  const spendStat = { label: "Revenue Generated", prefix: "₹", value: 5, suffix: "Cr+", isFloat: true };
   const achievements = [
-    { label: "Ad Spend Managed", prefix: "₹", value: 8.3, suffix: "Cr+", isFloat: true },
     { label: "Avg. ROAS Increase", prefix: "", value: 10, suffix: "x", isFloat: false },
     { label: "Active Clients", prefix: "", value: 40, suffix: "+", isFloat: false },
     { label: "Years of Experience", prefix: "", value: 8, suffix: "+", isFloat: false },
@@ -21,9 +21,9 @@ const Impact = () => {
   useGSAP(() => {
     const elements = gsap.utils.toArray('.achievement-number');
 
-    elements.forEach((el, index) => {
-      const target = achievements[index].value;
-      const isFloat = achievements[index].isFloat;
+    elements.forEach((el) => {
+      const target = parseFloat(el.dataset.target);
+      const isFloat = el.dataset.float === 'true';
 
       ScrollTrigger.create({
         trigger: numbersRef.current,
@@ -75,20 +75,30 @@ const Impact = () => {
             {achievementsDescription}
           </p>
         </div>
-        <div ref={numbersRef} className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 md:flex md:flex-wrap md:justify-between">
-          {achievements.map((item, idx) => (
-            <div
-              className="flex flex-col gap-2 text-center md:text-left"
-              key={item.label + idx}
-            >
-              <span className="font-[silkSerif] text-4xl font-bold md:text-5xl text-black flex justify-center md:justify-start">
-                {item.prefix && <span>{item.prefix}</span>}
-                <span className="achievement-number">0</span>
-                {item.suffix && <span>{item.suffix}</span>}
-              </span>
-              <p className="text-sm md:text-base font-sans text-zinc-600 uppercase tracking-wide font-bold mt-2">{item.label}</p>
-            </div>
-          ))}
+        <div ref={numbersRef} className="mt-10 flex flex-col gap-10 md:flex-row md:items-center md:justify-between md:gap-12">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:flex md:gap-12">
+            {achievements.map((item, idx) => (
+              <div
+                className="flex flex-col gap-2 text-center md:text-left"
+                key={item.label + idx}
+              >
+                <span className="font-[silkSerif] text-4xl font-bold md:text-5xl text-black flex justify-center md:justify-start">
+                  {item.prefix && <span>{item.prefix}</span>}
+                  <span className="achievement-number" data-target={item.value} data-float={item.isFloat}>0</span>
+                  {item.suffix && <span>{item.suffix}</span>}
+                </span>
+                <p className="text-sm md:text-base font-sans text-zinc-600 uppercase tracking-wide font-bold mt-2">{item.label}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col gap-2 text-center md:text-right md:items-end md:border-l md:border-gray-300 md:pl-12">
+            <span className="font-[silkSerif] text-5xl font-bold md:text-7xl text-black flex justify-center md:justify-end">
+              {spendStat.prefix && <span>{spendStat.prefix}</span>}
+              <span className="achievement-number" data-target={spendStat.value} data-float={spendStat.isFloat}>0</span>
+              {spendStat.suffix && <span>{spendStat.suffix}</span>}
+            </span>
+            <p className="text-sm md:text-base font-sans text-zinc-600 uppercase tracking-wide font-bold mt-2">{spendStat.label}</p>
+          </div>
         </div>
       </div>
     </section>

@@ -33,12 +33,12 @@ const About = () => {
   const description = "At Footfall Metrics, we help businesses turn online searches into real customer visits. Using Google Ads, Meta Ads, and Local Search Advertising, we focus on one metric that truly matters—actual footfall. Unlike traditional marketing agencies that focus on clicks and impressions, we specialize in driving verified walk-ins to physical locations. Our strategies are designed to connect businesses with nearby customers who are actively looking for their products or services. Simply put, we help businesses get found, get visited, and grow.";
   
   const mainImage = {
-    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80",
-    alt: "Data Analysis and Strategy",
+    src: "/images/about_google_ads.jpg",
+    alt: "Google Ads Performance Dashboard",
   };
   const secondaryImage = {
-    src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80",
-    alt: "Performance Marketing Dashboard",
+    src: "/images/about_meta_ads.png",
+    alt: "Meta Ads Campaigns Dashboard",
   };
   
   const breakout = {
@@ -111,7 +111,7 @@ const About = () => {
         <div className="left">
           <div className="md:pl-[14vw]">
             <div className="font-[silkSerif] text-[8vw] mb-0 md:mb-0 md:text-[2.6vw] md:leading-[4vw]">
-              <h2>03</h2>
+              <h2>04</h2>
             </div>             
           </div>
         </div>

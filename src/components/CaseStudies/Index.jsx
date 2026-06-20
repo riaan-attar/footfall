@@ -17,7 +17,7 @@ const cases = [
     stats: [
       { value: '400%', label: 'Revenue Growth' },
       { value: 'More than 20x', label: 'increase in ROAS' },
-      { value: '1 to 6 Outlets', label: 'in 3 years' },
+      { value: '6 Outlets', label: 'in 3 years' },
     ]
   },
   {
@@ -32,6 +32,7 @@ const cases = [
       { value: '8x ROAS', label: 'Achieved' },
       { value: '50%', label: 'Increase in Kitty & Corporate Bookings' },
       { value: '20%', label: 'Revenue Growth' },
+      { value: 'Multiple', label: 'Outlets' },
     ]
   },
   {
@@ -60,6 +61,7 @@ const cases = [
       { value: '13x', label: 'ROAS' },
       { value: '15%', label: 'Revenue Growth' },
       { value: '120%', label: 'increase in New Customers' },
+      { value: 'Multiple', label: 'Outlets' },
     ]
   },
 ];
@@ -75,7 +77,8 @@ export default function CaseStudies() {
       });
       gsap.fromTo('.case-card', { opacity: 0, y: 80 }, {
         opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.15,
-        scrollTrigger: { trigger: '.case-card', start: 'top 88%', toggleActions: 'play none none reset' }
+        clearProps: 'transform',
+        scrollTrigger: { trigger: '.case-card', start: 'top 88%', toggleActions: 'play none none none' }
       });
     }, sectionRef);
     return () => ctx.revert();
@@ -88,7 +91,7 @@ export default function CaseStudies() {
         <div className="left">
           <div className="md:pl-[14vw]">
             <div className="font-[silkSerif] text-[8vw] mb-0 md:mb-0 md:text-[2.6vw] md:leading-[4vw]">
-              <h2>09</h2>
+              <h2>03</h2>
             </div>
           </div>
         </div>
@@ -107,9 +110,11 @@ export default function CaseStudies() {
         {cases.map((study, i) => (
           <article
             key={i}
-            className={`case-card group relative w-full rounded-2xl overflow-hidden flex flex-col md:flex ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-              }`}
-            style={{ backgroundColor: study.color }}
+            className={`case-card sticky group relative w-full rounded-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col md:flex ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+            style={{
+              backgroundColor: study.color,
+              top: `calc(10vh + ${i * 30}px)`
+            }}
           >
             {/* Image Half — explicit aspect-ratio so Locomotive Scroll knows height before img loads */}
             <div className="relative w-full md:w-1/2 overflow-hidden" style={{ aspectRatio: '4/3' }}>
@@ -125,7 +130,7 @@ export default function CaseStudies() {
 
             {/* Content Half */}
             <div
-              className={`relative w-full md:w-1/2 flex flex-col justify-center px-[8vw] py-[12vw] md:px-[5vw] md:py-[4vw] ${study.textLight ? 'text-white' : 'text-zinc-900'
+              className={`relative w-full md:w-1/2 flex flex-col justify-center px-[8vw] pt-[12vw] pb-[24vw] md:px-[5vw] md:pt-[4vw] md:pb-[12vw] ${study.textLight ? 'text-white' : 'text-zinc-900'
                 }`}
             >
               {/* Stats Block */}
@@ -175,47 +180,12 @@ export default function CaseStudies() {
                 {study.excerpt}
               </p>
 
-              {/* CTA */}
-              <div className="mt-[6vw] md:mt-[2.5vw] flex items-center gap-[2vw] md:gap-[.8vw]">
-                <span
-                  className="font-[PlinaReg] uppercase tracking-widest text-[3.5vw] md:text-[.85vw] font-bold transition-all group-hover:gap-[1.2vw]"
-                  style={{ opacity: study.textLight ? 0.9 : 0.8 }}
-                >
-                  Read More
-                </span>
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                >
-                  <path
-                    d="M1 7h12M8 2l5 5-5 5"
-                    stroke={study.textLight ? '#fff' : '#111'}
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
+
             </div>
           </article>
         ))}
       </div>
-      <div className="w-full bg-white border-t border-zinc-100 px-[6vw] md:px-[4vw] pt-[6vw] pb-0 md:pt-[2vw] md:pb-0">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <h5 className="text-[3vw] md:text-[.8vw] text-zinc-400 font-semibold tracking-widest uppercase">
-            Footfall Metrics &copy; 2024
-          </h5>
-          <h5 className="text-[3vw] md:text-[.8vw] text-zinc-400 font-semibold tracking-widest uppercase flex items-center gap-2">
-            Developed by
-            <a href="https://riaanattar.me" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#F63D18] transition-colors underline decoration-1 underline-offset-4 font-bold">
-              Riaan Attar
-            </a>
-          </h5>
-        </div>
-      </div>
+
     </section>
   );
 }
