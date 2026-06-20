@@ -84,13 +84,13 @@ export default function Founders() {
 
           <div className="flex flex-col gap-5">
             <p className="founder-text font-[PlinaReg] text-[20px] text-black leading-[1.5] border-l-2 border-[#F63D18] pl-4">
-              &quot;Our vision is to provide the highest quality digital experiences — no compromises, no shortcuts.&quot;
+              &quot;Our vision is to provide the highest quality digital experiences  no compromises, no shortcuts.&quot;
             </p>
             <p className="founder-text font-sans text-[16px] text-zinc-600 leading-[1.7] mt-2">
               We are a collective of passionate creators, engineers, and strategists. We thrive on creative challenges, blending technical precision with imaginative thinking to build work that actually means something.
             </p>
             <p className="founder-text font-sans text-[16px] text-zinc-600 leading-[1.7]">
-              When we&apos;re not building or analyzing, we&apos;re constantly exploring new horizons — because discipline in life and discipline in work are the same thing.
+              When we&apos;re not building or analyzing, we&apos;re constantly exploring new horizons because discipline in life and discipline in work are the same thing.
             </p>
           </div>
 
@@ -105,15 +105,15 @@ export default function Founders() {
           <div className="founder-text mt-10 pt-8 border-t border-gray-200 flex flex-col md:flex-row gap-8">
             <div>
               <h4 className="font-[silkSerif] text-[22px] text-black font-bold">Siddhant Sali</h4>
-              <span className="font-[PlinaReg] text-[12px] uppercase text-zinc-500 tracking-widest block mt-1">Founder</span>
+              <span className="font-[PlinaReg] text-[12px] uppercase text-zinc-500 tracking-widest block mt-1">Co-Founder</span>
             </div>
             <div>
               <h4 className="font-[silkSerif] text-[22px] text-black font-bold">Shubham Chordiya</h4>
-              <span className="font-[PlinaReg] text-[12px] uppercase text-zinc-500 tracking-widest block mt-1">Founder</span>
+              <span className="font-[PlinaReg] text-[12px] uppercase text-zinc-500 tracking-widest block mt-1">Co-Founder</span>
             </div>
             <div>
               <h4 className="font-[silkSerif] text-[22px] text-black font-bold">Niranjan Mahale</h4>
-              <span className="font-[PlinaReg] text-[12px] uppercase text-zinc-500 tracking-widest block mt-1">Founder</span>
+              <span className="font-[PlinaReg] text-[12px] uppercase text-zinc-500 tracking-widest block mt-1">Co-Founder</span>
             </div>
           </div>
         </div>
