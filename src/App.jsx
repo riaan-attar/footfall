@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from 'react'
 import Landing from './components/landing/Index';
 import Services from './components/Services/Index';
 import Loader from './components/loader/Index';
+import Impact from './components/Impact/Index';
 
 import About from './components/About/Index';
 import Marqueue from './components/Marqueue/Index';
@@ -47,6 +48,7 @@ function App() {
         <div className='bg-white'>
           <Navbar/>
           <Landing />
+          <Impact />
           <Services />
           <Project/>
           <About/>

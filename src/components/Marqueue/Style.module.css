@@ -24,11 +24,11 @@
 }
 
 .elem {
-    animation: anime 10s infinite linear;
+    animation: anime 25s infinite linear;
 }
 
 
 .elem2 {
     transform: translateX(calc(-100% - 20px));
-    animation: anime 10s infinite linear reverse;
+    animation: anime 25s infinite linear reverse;
 }

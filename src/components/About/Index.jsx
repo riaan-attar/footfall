@@ -57,49 +57,9 @@ const About = () => {
     { src: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg", alt: "Amazon" },
   ];
 
-  const achievementsTitle = "Our Impact in Numbers";
-  const achievementsDescription = "We don't just run ads; we build revenue engines. Here is the tangible impact we've delivered for our partners.";
-  const achievements = [
-    { label: "Ad Spend Managed", prefix: "$", value: 1, suffix: "M+", isFloat: false },
-    { label: "Avg. ROAS Increase", prefix: "", value: 10, suffix: "x", isFloat: false },
-    { label: "Active Clients", prefix: "", value: 40, suffix: "+", isFloat: false },
-    { label: "Years of Experience", prefix: "", value: 8, suffix: "+", isFloat: false },
-  ];
-
-  const numbersRef = useRef(null);
   const sectionRef = useRef(null);
 
   useGSAP(() => {
-    // ── Number counters: re-animate every time the section enters the viewport ──
-    const elements = gsap.utils.toArray('.achievement-number');
-
-    elements.forEach((el, index) => {
-      const target = achievements[index].value;
-      const isFloat = achievements[index].isFloat;
-
-      ScrollTrigger.create({
-        trigger: numbersRef.current,
-        start: 'top 80%',
-        // onEnter AND onEnterBack both fire the counter so it re-runs on every visit
-        onEnter: () => runCounter(el, target, isFloat),
-        onEnterBack: () => runCounter(el, target, isFloat),
-      });
-    });
-
-    function runCounter(el, target, isFloat) {
-      // Reset to 0 first so the animation always starts fresh
-      el.innerHTML = isFloat ? '0.0' : '0';
-      const obj = { val: 0 };
-      gsap.to(obj, {
-        val: target,
-        duration: 2,
-        ease: 'power2.out',
-        onUpdate: () => {
-          el.innerHTML = isFloat ? obj.val.toFixed(1) : Math.floor(obj.val);
-        },
-      });
-    }
-
     // ── Scroll-reveal for About section elements ──
     const revealItems = [
       { sel: '.about-description', y: 40, delay: 0 },
@@ -107,7 +67,6 @@ const About = () => {
       { sel: '.about-breakout',    y: 50, delay: 0.15 },
       { sel: '.about-secondary-img', y: 60, delay: 0.2 },
       { sel: '.about-companies',   y: 30, delay: 0 },
-      { sel: '.about-stats-block', y: 50, delay: 0 },
       { sel: '.about-content-section', y: 50, delay: 0, stagger: 0.15 },
     ];
 
@@ -146,7 +105,7 @@ const About = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="w-full bg-white pt-[6vw] pb-[6vw] md:pt-[6vw] md:pb-[2vw]">
+    <section ref={sectionRef} className="page4 w-full bg-white pt-[6vw] pb-[6vw] md:pt-[6vw] md:pb-[2vw]">
       {/* Existing Original Header Structure */}
       <div className="flex flex-row items-baseline gap-[4vw] md:gap-[5vw] w-full px-[6vw] md:px-[4vw] mb-[8vw]">
         <div className="left">
@@ -223,32 +182,6 @@ const About = () => {
             <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
           </div>
         )}
-
-        <div className="about-stats-block relative overflow-hidden rounded-xl bg-gray-100 p-7 md:p-16">
-          <div className="flex flex-col gap-4 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-[PlinaReg] uppercase tracking-tight font-bold text-black">
-              {achievementsTitle}
-            </h2>
-            <p className="max-w-xl text-zinc-500 font-sans">
-              {achievementsDescription}
-            </p>
-          </div>
-          <div ref={numbersRef} className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 md:flex md:flex-wrap md:justify-between">
-            {achievements.map((item, idx) => (
-              <div
-                className="flex flex-col gap-2 text-center md:text-left"
-                key={item.label + idx}
-              >
-                <span className="font-[silkSerif] text-4xl font-semibold md:text-5xl text-black flex justify-center md:justify-start">
-                  {item.prefix && <span>{item.prefix}</span>}
-                  <span className="achievement-number">0</span>
-                  {item.suffix && <span>{item.suffix}</span>}
-                </span>
-                <p className="text-sm md:text-base font-sans text-zinc-600 uppercase tracking-wide font-bold mt-2">{item.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {contentSections && contentSections.length > 0 && (
           <div className="mx-auto grid max-w-5xl gap-12 py-12 md:py-28 md:grid-cols-2 md:gap-28">
