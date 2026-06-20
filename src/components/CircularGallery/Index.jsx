@@ -44,11 +44,11 @@ function createTestimonialTexture(gl, item) {
       if (img.complete && img.naturalWidth !== 0) {
         ctx.save();
         ctx.beginPath();
-        // center of avatar circle: (160, 160), radius: 80
-        ctx.arc(160, 160, 80, 0, Math.PI * 2, true);
+        // center of avatar circle: (500, 200), radius: 130
+        ctx.arc(500, 200, 130, 0, Math.PI * 2, true);
         ctx.closePath();
         ctx.clip();
-        ctx.drawImage(img, 80, 80, 160, 160);
+        ctx.drawImage(img, 370, 70, 260, 260);
         ctx.restore();
       }
     } catch (e) {
@@ -59,7 +59,7 @@ function createTestimonialTexture(gl, item) {
     ctx.fillStyle = '#111111';
     ctx.font = '42px "PlinaReg", sans-serif'; 
     ctx.textBaseline = 'top';
-    ctx.textAlign = 'left';
+    ctx.textAlign = 'center';
     
     const wrapText = (text, x, y, maxWidth, lineHeight) => {
       const words = text.split(' ');
@@ -81,17 +81,17 @@ function createTestimonialTexture(gl, item) {
       return currentY + lineHeight;
     };
     
-    const textY = wrapText(item.text, 80, 320, 840, 64);
+    const textY = wrapText(item.text, 500, 390, 840, 64);
     
     // 4. Draw signature
     ctx.font = 'italic 72px "silkSerif", serif';
     ctx.fillStyle = '#111111';
-    ctx.fillText(item.name, 80, textY + 160);
+    ctx.fillText(item.name, 500, textY + 120);
     
     // 5. Draw Title
     ctx.font = '36px "PlinaReg", sans-serif';
     ctx.fillStyle = '#888888';
-    ctx.fillText(item.title, 80, textY + 260);
+    ctx.fillText(item.title, 500, textY + 220);
     
     // Trigger texture update in WebGL
     texture.needsUpdate = true;
