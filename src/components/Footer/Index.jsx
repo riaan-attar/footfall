@@ -8,8 +8,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const data = [
-    { title: "Instagram" },
-    { title: "Facebook" },
+    { title: "Instagram", url: "https://www.instagram.com/footfallmetrics/" },
+    { title: "Facebook", url: "#" },
+    { title: "LinkedIn", url: "https://www.linkedin.com/company/footfallmetrics/" }
 ]
 
 function Footer() {
@@ -151,12 +152,12 @@ function Footer() {
                                 <h3 className="text-zinc-500 text-[3.5vw] md:text-[.9vw] uppercase tracking-widest font-semibold mb-[4vw] md:mb-[2vw]">Socials</h3>
                                 {data.map((item, index) => {
                                     return (
-                                        <div key={index}
+                                        <a key={index} href={item.url} target="_blank" rel="noopener noreferrer"
                                             className='relative flex flex-col text-[5.4vw] leading-[6vw] 
-                                        md:text-[1.6vw] md:leading-[1.8vw]'
+                                        md:text-[1.6vw] md:leading-[1.8vw] w-fit block'
                                         >
                                             <AnimatedLink title={item.title} />
-                                        </div>
+                                        </a>
                                     )
                                 })}
                             </div>
