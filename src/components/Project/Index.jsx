@@ -10,12 +10,16 @@ const brands = [
   { name: 'Shiv Sagar', src: '/images/logo/shivsagar.png' },
   { name: 'BBQ Earth', src: '/images/logo/BBQ Earth Logo.png' },
   { name: 'Bharathiya', src: '/images/logo/Bharathiya Logo.png' },
+  { name: 'Coffee Mechanics', src: '/images/logo/Coffee Mechanics Logo.png' },
   { name: 'Factory Bar & Kitchen', src: '/images/logo/Factory Bar Logo.png' },
   { name: 'Kake Da Hotel', src: '/images/logo/kake-da-logo-newlogo.png' },
   { name: 'Karl Residency', src: '/images/logo/Karl logo.png' },
   { name: 'Kuubera', src: '/images/logo/Kuubera Logo.png' },
+  { name: 'Mangroove', src: '/images/logo/Mangroove Logo.png' },
   { name: 'Miya Kebab', src: '/images/logo/Miya Kebab Logo.png' },
   { name: 'Pav Bhaji Panda', src: '/images/logo/Pav Bhaji Panda Logo.png' },
+  { name: 'Rameshwaram Cafe', src: '/images/logo/Rameshwaram Cafe Logo.png' },
+  { name: 'Suryawanshi Restaurant', src: '/images/logo/Suryawanshi Logo.png' },
   { name: 'Terra Goa', src: '/images/logo/Terra Logo.png' },
   { name: 'TGIB', src: '/images/logo/TGIB Logo.png' }
 ];
