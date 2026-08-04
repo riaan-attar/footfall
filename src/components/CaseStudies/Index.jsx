@@ -7,20 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cases = [
   {
-    tag: 'Brand Strategy',
-    title: 'MIYA KEBABS',
-    excerpt:
-      "Miya Kebabs represents one of Footfall Metrics' most successful long-term growth stories. We partnered with the brand during its early stages when it operated a single outlet in Mumbai. Over the next three years, we worked closely with the founders to build brand awareness and drive customer acquisition through a combination of Google Ads, Meta Ads, influencer collaborations, and continuous performance marketing optimization. Our campaigns focused on increasing local visibility, strengthening brand recall, and generating consistent footfall across locations. As the brand grew, so did its presence. From a single outlet, Miya Kebabs expanded to five outlets across Mumbai and Pune, supported by sustained marketing efforts and a strong digital presence. Today, the brand continues to achieve exceptional results, with Google Ads consistently delivering over 20x ROAS month after month. Miya Kebabs stands as a testament to how data-driven performance marketing can help transform a local restaurant into a recognized regional brand.",
-    image: '/images/miyakebabs.png',
-    color: '#1a1a2e',
-    textLight: true,
-    stats: [
-      { value: '400%', label: 'Revenue Growth' },
-      { value: 'More than 20x', label: 'increase in ROAS' },
-      { value: '6 Outlets', label: 'in 3 years' },
-    ]
-  },
-  {
     tag: 'Legacy Continued',
     title: 'Kake Da Hotel',
     excerpt:
