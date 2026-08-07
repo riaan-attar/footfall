@@ -164,7 +164,7 @@ function Footer() {
                             <div className="contact-section space-y-[2vw] md:space-y-[1vw]">
                                 <h3 className="text-zinc-500 text-[3.5vw] md:text-[.9vw] uppercase tracking-widest font-semibold mb-[4vw] md:mb-[2vw]">Address</h3>
                                 <h2 className="text-[5.4vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw]">B-37, NICE Industrial Area</h2>
-                                <h2 className="text-[5.4vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw]">MIDC, Nashik</h2>
+                                <h2 className="text-[5.4vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw]">MIDC, Nashik, INDIA</h2>
                                 <h2 className="text-[5.4vw] leading-[6vw] md:text-[1.6vw] md:leading-[1.8vw]">422007</h2>
                             </div>
                             <div className="contact-section space-y-[2vw] md:space-y-[1vw]">

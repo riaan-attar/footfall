@@ -12,11 +12,41 @@ const CLIENTS = [
   { lat: 23.0225,  lng:  72.5714, label: 'Ahmedabad' },
   { lat: 13.0827,  lng:  80.2707, label: 'Chennai' },
   
-  // Australia (1 pin)
-  { lat: -33.8688, lng: 151.2093, label: 'Australia' },
-  
-  // Dubai (1 pin)
+  // Middle East
   { lat: 25.2048,  lng:  55.2708, label: 'Dubai' },
+  { lat: 24.7136,  lng:  46.6753, label: 'Riyadh' },
+  
+  // East & Southeast Asia
+  { lat: 1.3521,   lng: 103.8198, label: 'Singapore' },
+  { lat: 35.6762,  lng: 139.6503, label: 'Tokyo' },
+  { lat: 22.3193,  lng: 114.1694, label: 'Hong Kong' },
+  { lat: 37.5665,  lng: 126.9780, label: 'Seoul' },
+  
+  // Europe
+  { lat: 51.5074,  lng:  -0.1278, label: 'London' },
+  { lat: 48.8566,  lng:   2.3522, label: 'Paris' },
+  { lat: 52.5200,  lng:  13.4050, label: 'Berlin' },
+  { lat: 41.9028,  lng:  12.4964, label: 'Rome' },
+  
+  // North America
+  { lat: 40.7128,  lng: -74.0060, label: 'New York' },
+  { lat: 34.0522,  lng: -118.2437, label: 'Los Angeles' },
+  { lat: 43.6532,  lng: -79.3832, label: 'Toronto' },
+  { lat: 19.4326,  lng: -99.1332, label: 'Mexico City' },
+  
+  // South America
+  { lat: -23.5505, lng: -46.6333, label: 'Sao Paulo' },
+  { lat: -34.6037, lng: -58.3816, label: 'Buenos Aires' },
+  
+  // Africa
+  { lat: 30.0444,  lng:  31.2357, label: 'Cairo' },
+  { lat: -26.2041, lng:  28.0473, label: 'Johannesburg' },
+  { lat: -1.2921,  lng:  36.8219, label: 'Nairobi' },
+
+  // Australia & New Zealand
+  { lat: -33.8688, lng: 151.2093, label: 'Sydney' },
+  { lat: -37.8136, lng: 144.9631, label: 'Melbourne' },
+  { lat: -36.8485, lng: 174.7633, label: 'Auckland' }
 ];
 
 export default function GlobeViewer({ size = 520 }) {
