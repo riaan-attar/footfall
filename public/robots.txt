@@ -1,4 +1,56 @@
+# ==============================================================================
+# Robots.txt for Footfall Metrics (https://footfallmetrics.in)
+# Premier Restaurant Advertising Agency & Marketing Agency for Restaurants
+# ==============================================================================
+
+# Default rule for all web crawlers
 User-agent: *
 Allow: /
 
+# Major Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# AI Search & Generative Engine Crawlers (SearchGPT, ChatGPT, Perplexity, Claude, Gemini)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+# Host & Sitemap
+Host: https://footfallmetrics.in
 Sitemap: https://footfallmetrics.in/sitemap.xml

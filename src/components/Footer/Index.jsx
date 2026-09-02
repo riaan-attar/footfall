@@ -193,7 +193,7 @@ function Footer() {
                     </h5>
                     <h5 className="text-[3vw] md:text-[.8vw] text-zinc-400 font-semibold tracking-widest uppercase flex items-center gap-2">
                         Developed by
-                        <a href="https://riaanattar.me" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#F63D18] transition-colors underline decoration-1 underline-offset-4 font-bold">
+                        <a href="https://riaanattar.dev" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#F63D18] transition-colors underline decoration-1 underline-offset-4 font-bold">
                             Riaan Attar
                         </a>
                     </h5>

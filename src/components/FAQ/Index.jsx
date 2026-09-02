@@ -7,20 +7,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
   {
-    question: "What specific digital marketing services do you offer for restaurants?",
-    answer: "We specialize in end-to-end digital marketing for the F&B industry. This includes highly targeted Google Ads, Meta Ads (Facebook & Instagram) for local reach, SEO optimization to rank on 'near me' searches, and custom website design to showcase your menu and drive direct reservations."
+    question: "What makes Footfall Metrics the leading restaurant advertising agency?",
+    answer: "As a premier digital marketing agency for restaurants, we focus exclusively on verified walk-ins and table bookings rather than vanity impressions. Our specialized team deploys high-converting Google Ads for restaurants, targeted Facebook ads for restaurants, and local SEO to turn online searches into paying diners."
   },
   {
-    question: "How long does it take to see an increase in footfall?",
-    answer: "With performance marketing (Google & Meta Ads), you can see an initial spike in inquiries and footfall within the first 2-3 weeks. For organic growth (SEO & Content Marketing), we typically start seeing sustainable momentum within 3-4 months."
+    question: "How do restaurant ads on Facebook and Instagram drive actual footfall?",
+    answer: "Our restaurant ads on Facebook and Instagram leverage pinpoint geotargeting around your venue, enticing culinary video creatives, and local store-visit objectives. By reaching hungry diners within your immediate delivery and dining radius, we convert casual social media scrollers into seated guests."
   },
   {
-    question: "How do you measure the success of a campaign?",
-    answer: "We focus on real metrics that impact your bottom line: cost per acquisition (CPA), return on ad spend (ROAS), table reservations booked, online orders generated, and overall footfall increase directly attributed to our digital campaigns."
+    question: "Why should restaurant marketing firms prioritize Google Ads for restaurants?",
+    answer: "When potential customers search for 'best restaurants near me', 'places to eat', or specific cuisines, Google Ads for restaurants place your brand at the exact top of search and Google Maps results. This captures high-intent diners at the exact moment they are deciding where to eat."
   },
   {
-    question: "Can you help redesign our restaurant's website?",
-    answer: "Absolutely. We build modern, visually stunning, and conversion-optimized websites that serve as the digital storefront for your restaurant. Our designs integrate seamlessly with reservation systems and online ordering platforms."
+    question: "How do you measure ROI compared to other marketing companies for restaurants?",
+    answer: "Unlike traditional marketing companies for restaurants that report only impressions and clicks, we measure real business metrics: cost per table reservation, direct inquiry cost, return on ad spend (ROAS), and verified footfall growth directly attributed to our advertising campaigns."
   }
 ];
 
