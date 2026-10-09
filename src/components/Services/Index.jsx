@@ -26,11 +26,12 @@ const Services = () => {
   const services = [
     {
       id: "01",
-      title: "Google Ads for Restaurants",
-      description: "Drive footfall, direct table bookings, and high-intent leads through strategically targeted Google Ads campaigns designed specifically for restaurants.",
+      title: "GOOGLE ADS Management",
+      description: "Drive footfall, direct bookings, and high-intent leads through strategically targeted Google Ads campaigns.",
       bullets: [
-        "Footfall & Table Booking Generation",
-        "High-Intent Search & Map Ads",
+        "Footfall Generation",
+        "Hotel & Resort Bookings",
+        "Search Ads",
         "Google Maps Promotions",
         "Hotel & Resort Dining Bookings",
         "Lead Generation Campaigns"
@@ -39,14 +40,16 @@ const Services = () => {
     },
     {
       id: "02",
-      title: "Facebook Ads for Restaurants",
-      description: "Scale awareness, walk-ins, and customer acquisition with high-performing Facebook ads for restaurants and Instagram advertising campaigns.",
+      title: "META ADS MANAGEMENT",
+      description: "Scale awareness, walk-ins, and customer acquisition through high-performing Facebook & Instagram advertising campaigns.",
       bullets: [
         "Restaurant Ads on Facebook & Instagram",
         "Store Visit & Walk-in Campaigns",
         "Hyperlocal Dining Demographics",
         "Lead Generation Ads",
-        "Event & Weekend Retargeting"
+        "Awareness Campaigns",
+        "Retargeting Campaigns",
+        "Hyperlocal Advertising"
       ],
       color: "#1a1a2e"
     }

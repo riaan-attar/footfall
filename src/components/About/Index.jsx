@@ -30,7 +30,7 @@ export function revealOnScroll(targets, options = {}) {
 }
 
 const About = () => {
-  const description = "At Footfall Metrics, we are a premier restaurant advertising agency and digital marketing agency for restaurants dedicated to turning online searches into real diner visits. As one of the dedicated restaurant marketing firms and marketing companies for restaurants, we focus on the one metric that truly matters—actual footfall. Using high-impact Google Ads for restaurants, Facebook ads for restaurants, and hyperlocal targeting, we specialize in driving verified walk-ins and table reservations to your doors. Simply put, we help dining establishments get discovered, packed, and profitably scaled.";
+  const description = "At Footfall Metrics, we help businesses turn online searches into real customer visits. Using Google Ads, Meta Ads, and Local Search Advertising, we focus on one metric that truly matters—actual footfall. Unlike traditional marketing agencies that focus on clicks and impressions, we specialize in driving verified walk-ins to physical locations. Our strategies are designed to connect businesses with nearby customers who are actively looking for their products or services. Simply put, we help businesses get found, get visited, and grow.";
   
   const mainImage = {
     src: "/images/about_google_ads.jpg",

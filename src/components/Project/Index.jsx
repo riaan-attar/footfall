@@ -21,7 +21,13 @@ const brands = [
   { name: 'Rameshwaram Cafe', src: '/images/logo/Rameshwaram Cafe Logo.png' },
   { name: 'Suryawanshi Restaurant', src: '/images/logo/Suryawanshi Logo.png' },
   { name: 'Terra Goa', src: '/images/logo/Terra Logo.png' },
-  { name: 'TGIB', src: '/images/logo/TGIB Logo.png' }
+  { name: 'TGIB', src: '/images/logo/TGIB Logo.png' },
+  { name: 'Casa Jaali', src: '/images/logo/Casa Jaali.jpeg' },
+  { name: 'Mansaf Elite', src: '/images/logo/Mansaf Elite.jpeg' },
+  { name: 'Marky Momos', src: '/images/logo/Marky Momos.jpeg' },
+  { name: 'The Rasoda', src: '/images/logo/THE RASODA.png' },
+  { name: 'Vault 21', src: '/images/logo/Vault 21.jpeg' },
+  { name: 'Oota Thindi', src: '/images/logo/oota thindi.avif' }
 ];
 
 function Project() {
@@ -63,23 +69,28 @@ function Project() {
 
         {/* Brand Logos Grid */}
         <div className="brand-card-grid grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-8 md:gap-x-12 md:gap-y-10 mt-[3vw]">
-          {brands.map((brand, i) => (
-            <div 
-              key={i} 
-              className="flex items-center justify-center h-[30vw] md:h-[10vw] relative group cursor-pointer"
-            >
-              <img 
-                src={brand.src} 
-                alt={brand.name} 
-                className="max-h-[75%] max-w-[90%] object-contain opacity-100 group-hover:opacity-0 group-hover:scale-75 transition-all duration-300 ease-out" 
-              />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
-                <span className="font-[PlinaReg] text-[3.8vw] md:text-[1.2vw] uppercase tracking-widest text-[#F63D18] font-bold text-center">
-                  {brand.name}
-                </span>
+          {brands.map((brand, i) => {
+            const isFirstOfCenteredLastRow = brands.length % 4 === 2 && i === brands.length - 2;
+            return (
+              <div 
+                key={i} 
+                className={`flex items-center justify-center h-[30vw] md:h-[10vw] relative group cursor-pointer ${
+                  isFirstOfCenteredLastRow ? 'md:col-start-2' : ''
+                }`}
+              >
+                <img 
+                  src={brand.src} 
+                  alt={brand.name} 
+                  className="max-h-[75%] max-w-[90%] object-contain opacity-100 group-hover:opacity-0 group-hover:scale-75 transition-all duration-300 ease-out" 
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+                  <span className="font-[PlinaReg] text-[3.8vw] md:text-[1.2vw] uppercase tracking-widest text-[#F63D18] font-bold text-center">
+                    {brand.name}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
     </div>
   )
