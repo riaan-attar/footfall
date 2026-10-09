@@ -92,18 +92,18 @@ export default function CaseStudies() {
       </div>
 
       {/* Case Study Cards — Alternating Layout */}
-      <div className="px-[6vw] md:px-[6vw] flex flex-col gap-[6vw] md:gap-[3vw]">
+      <div className="px-[6vw] md:px-[6vw] flex flex-col gap-[15vh] md:gap-[25vh] pb-[20vh]">
         {cases.map((study, i) => (
           <article
             key={i}
-            className={`case-card sticky group relative w-full rounded-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col md:flex ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+            className={`case-card sticky group relative w-full rounded-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
             style={{
               backgroundColor: study.color,
-              top: `calc(10vh + ${i * 30}px)`
+              top: `calc(6vh + ${i * 26}px)`
             }}
           >
-            {/* Image Half — explicit aspect-ratio so Locomotive Scroll knows height before img loads */}
-            <div className="relative w-full md:w-1/2 overflow-hidden" style={{ aspectRatio: '4/3' }}>
+            {/* Image Half */}
+            <div className="relative w-full md:w-1/2 h-[160px] sm:h-[220px] md:h-auto md:min-h-[380px] overflow-hidden">
               <img
                 src={study.image}
                 alt={study.title}
@@ -116,21 +116,21 @@ export default function CaseStudies() {
 
             {/* Content Half */}
             <div
-              className={`relative w-full md:w-1/2 flex flex-col justify-center px-[8vw] pt-[12vw] pb-[24vw] md:px-[5vw] md:pt-[4vw] md:pb-[12vw] ${study.textLight ? 'text-white' : 'text-zinc-900'
+              className={`relative w-full md:w-1/2 flex flex-col justify-center p-5 sm:p-6 md:px-[4vw] md:py-[2.5vw] ${study.textLight ? 'text-white' : 'text-zinc-900'
                 }`}
             >
               {/* Stats Block */}
               {study.stats && (
-                <div className="flex flex-row flex-wrap items-center gap-[6vw] md:gap-[3vw] mb-[6vw] md:mb-[3vw] pb-[4vw] md:pb-[2vw] border-b"
+                <div className="flex flex-row flex-wrap items-center gap-3 sm:gap-5 md:gap-[2.2vw] mb-3 sm:mb-4 md:mb-[1.5vw] pb-2.5 sm:pb-3 md:pb-[1vw] border-b"
                   style={{ borderColor: study.textLight ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.1)' }}
                 >
                   {study.stats.map((stat, idx) => (
-                    <div key={idx} className="flex flex-col gap-1">
-                      <span className="font-[PlinaReg] text-[7vw] md:text-[2vw] leading-none font-bold">
+                    <div key={idx} className="flex flex-col gap-0.5">
+                      <span className="font-[PlinaReg] text-xl sm:text-2xl md:text-[1.8vw] leading-none font-bold">
                         {stat.value}
                       </span>
                       <span
-                        className="font-sans text-[2.5vw] md:text-[0.7vw] uppercase tracking-widest font-semibold"
+                        className="font-sans text-[9px] sm:text-[11px] md:text-[0.7vw] uppercase tracking-widest font-semibold"
                         style={{ opacity: study.textLight ? 0.7 : 0.6 }}
                       >
                         {stat.label}
@@ -142,7 +142,7 @@ export default function CaseStudies() {
 
               {/* Tag */}
               <span
-                className="inline-block self-start mb-[4vw] md:mb-[1.5vw] px-3 py-1 rounded-full text-[3vw] md:text-[.75vw] uppercase tracking-widest font-bold border"
+                className="inline-block self-start mb-2 md:mb-[0.8vw] px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] sm:text-xs md:text-[.72vw] uppercase tracking-widest font-bold border"
                 style={{
                   borderColor: study.textLight ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.2)',
                   color: study.textLight ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.6)',
@@ -153,19 +153,18 @@ export default function CaseStudies() {
 
               {/* Title */}
               <h2
-                className="font-[PlinaReg] text-[8vw] leading-[9vw] md:text-[2.4vw] md:leading-[3vw] mb-[4vw] md:mb-[2vw] uppercase tracking-tight"
+                className="font-[PlinaReg] text-xl sm:text-2xl md:text-[2.2vw] md:leading-[2.6vw] mb-2 md:mb-[0.8vw] uppercase tracking-tight"
               >
                 {study.title}
               </h2>
 
               {/* Excerpt */}
               <p
-                className="font-sans text-[3.5vw] md:text-[.9vw] leading-[5.5vw] md:leading-[1.6vw] md:max-w-[90%]"
+                className="font-sans text-xs sm:text-sm md:text-[.88vw] leading-relaxed md:leading-[1.55vw] md:max-w-[95%]"
                 style={{ opacity: study.textLight ? 0.75 : 0.65 }}
               >
                 {study.excerpt}
               </p>
-
 
             </div>
           </article>
